@@ -6,15 +6,36 @@ using UnityEngine.UI;
 public class UIController : MonoBehaviour
 {
 
-    public Button testButton;
+    public Button gearButton;
+    public GameObject gearPanel;
 
-	// Use this for initialization
-	void Start () {
+	void Start ()
+    {
 		
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+    public void OnClickGearButton()
+    {
+        if(gearPanel.activeInHierarchy == true)
+        {
+            gearPanel.SetActive(false);
+        }
+        else
+        {
+            gearPanel.SetActive(true);
+        }
+    }
+
+
+    public void OnClickQuitButton()
+    {
+        Application.Quit();
+    }
+
+
+    public void OnClickCreditsButton()
+    {
+        SceneController.instance.CreditsSceneProgression();
+    }
+
 }
