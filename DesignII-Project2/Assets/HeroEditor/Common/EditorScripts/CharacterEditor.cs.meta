@@ -1,0 +1,67 @@
+fileFormatVersion: 2
+guid: e3ee0b5972fd424e87d8494571d6ffda
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - SpriteCollection: {instanceID: 0}
+  - AnimationManager: {instanceID: 0}
+  - Character: {instanceID: 0}
+  - Editor: {instanceID: 0}
+  - CommonPalette: {instanceID: 0}
+  - SkinPalette: {instanceID: 0}
+  - HeadDropdown: {instanceID: 0}
+  - EarsDropdown: {instanceID: 0}
+  - HairDropdown: {instanceID: 0}
+  - EyebrowsDropdown: {instanceID: 0}
+  - EyesDropdown: {instanceID: 0}
+  - MouthDropdown: {instanceID: 0}
+  - BeardDropdown: {instanceID: 0}
+  - BodyDropdown: {instanceID: 0}
+  - HelmetDropdown: {instanceID: 0}
+  - EarringsDropdown: {instanceID: 0}
+  - GlassesDropdown: {instanceID: 0}
+  - MaskDropdown: {instanceID: 0}
+  - ArmorDropdown: {instanceID: 0}
+  - CapeDropdown: {instanceID: 0}
+  - BackDropdown: {instanceID: 0}
+  - MeleeWeapon1HDropdown: {instanceID: 0}
+  - MeleeWeaponPairedDropdown: {instanceID: 0}
+  - MeleeWeapon2HDropdown: {instanceID: 0}
+  - BowDropdown: {instanceID: 0}
+  - Firearms1HDropdown: {instanceID: 0}
+  - Firearms2HDropdown: {instanceID: 0}
+  - ShieldDropdown: {instanceID: 0}
+  - SuppliesDropdown: {instanceID: 0}
+  - AngryEyebrowsDropdown: {instanceID: 0}
+  - AngryEyesDropdown: {instanceID: 0}
+  - AngryMouthDropdown: {instanceID: 0}
+  - DeadEyebrowsDropdown: {instanceID: 0}
+  - DeadEyesDropdown: {instanceID: 0}
+  - DeadMouthDropdown: {instanceID: 0}
+  - ArmorArmLDropdown: {instanceID: 0}
+  - ArmorArmRDropdown: {instanceID: 0}
+  - ArmorForearmLDropdown: {instanceID: 0}
+  - ArmorForearmRDropdown: {instanceID: 0}
+  - ArmorHandLDropdown: {instanceID: 0}
+  - ArmorHandRDropdown: {instanceID: 0}
+  - ArmorFingerDropdown: {instanceID: 0}
+  - ArmorSleeveRDropdown: {instanceID: 0}
+  - ArmorLegDropdown: {instanceID: 0}
+  - ArmorPelvisDropdown: {instanceID: 0}
+  - ArmorShinDropdown: {instanceID: 0}
+  - ArmorTorsoDropdown: {instanceID: 0}
+  - UpperArmorDropdown: {instanceID: 0}
+  - LowerArmorDropdown: {instanceID: 0}
+  - GlovesDropdown: {instanceID: 0}
+  - BootsDropdown: {instanceID: 0}
+  - MainEditor: {instanceID: 0}
+  - ExpressionEditor: {instanceID: 0}
+  - ArmorPartsEditor: {instanceID: 0}
+  - DefaultMaterial: {instanceID: 0}
+  - FirearmCollection: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
