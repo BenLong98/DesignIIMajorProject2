@@ -16,4 +16,19 @@ public class BattleController : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    void SortByInitiative()
+    {
+        List<GameObject> battlers = new List<GameObject>();
+        foreach(GenericPlayerChar chara in _chars)
+        {
+            battlers.Add(chara.gameObject);
+        }
+        foreach(GenericEnemy enemy in _enemies)
+        {
+            battlers.Add(enemy.gameObject);
+        }
+
+        //Sort by initiative
+    }
 }

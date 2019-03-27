@@ -375,6 +375,7 @@ GameObject:
   - component: {fileID: 114830940493134966}
   - component: {fileID: 114007493357758274}
   - component: {fileID: 114891107235769832}
+  - component: {fileID: 114681229062774560}
   m_Layer: 0
   m_Name: Knight
   m_TagString: Untagged
@@ -2112,7 +2113,7 @@ Transform:
   m_GameObject: {fileID: 1237964768629914}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -3.4, y: 0.6, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 10, y: 10, z: 1}
   m_Children:
   - {fileID: 4753918842992342}
   m_Father: {fileID: 0}
@@ -3545,6 +3546,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AnimationEvents: {fileID: 114343863210817520}
   Edge: {fileID: 4966480182454662}
+--- !u!114 &114681229062774560
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1237964768629914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d5ae1063ac635649af0edcc4956d7d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114721895799458954
 MonoBehaviour:
   m_ObjectHideFlags: 1

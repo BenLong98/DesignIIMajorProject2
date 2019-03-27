@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GenericPlayerChar
+public class GenericPlayerChar : MonoBehaviour
 {
     private int _health;
     protected int _maxHealth;

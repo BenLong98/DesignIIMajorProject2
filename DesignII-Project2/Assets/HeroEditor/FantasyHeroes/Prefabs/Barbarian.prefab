@@ -1069,6 +1069,7 @@ GameObject:
   - component: {fileID: 114807552981062382}
   - component: {fileID: 114492803156762668}
   - component: {fileID: 114583218894596792}
+  - component: {fileID: 114823673880789262}
   m_Layer: 0
   m_Name: Barbarian
   m_TagString: Untagged
@@ -1781,7 +1782,7 @@ Transform:
   m_GameObject: {fileID: 1670277555282186}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -3.4, y: 0.6, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 10, y: 10, z: 1}
   m_Children:
   - {fileID: 4874094215304714}
   m_Father: {fileID: 0}
@@ -3690,6 +3691,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7655dbdbae96492abedad7bdc555301d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114823673880789262
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1670277555282186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d080f36068127174abe4ef8bbf6b91b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!198 &198417814959495270
