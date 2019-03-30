@@ -1051,7 +1051,6 @@ GameObject:
   - component: {fileID: 114253082877351422}
   - component: {fileID: 114474180908167670}
   - component: {fileID: 114138873802670616}
-  - component: {fileID: 114419877123612204}
   m_Layer: 0
   m_Name: Wizzard
   m_TagString: Untagged
@@ -3465,17 +3464,6 @@ MonoBehaviour:
   FireButtonDown: 0
   FireButtonPressed: 0
   FireButtonUp: 0
---- !u!114 &114419877123612204
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1606929481381972}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e853451ef3aea284291276a172f2473a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114474180908167670
 MonoBehaviour:
   m_ObjectHideFlags: 1

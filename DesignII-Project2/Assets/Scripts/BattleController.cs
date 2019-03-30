@@ -4,13 +4,23 @@ using UnityEngine;
 
 public class BattleController : MonoBehaviour {
 
-    private List<GenericPlayerChar> _chars = new List<GenericPlayerChar>();
-    private List<GenericEnemy> _enemies = new List<GenericEnemy>();
+    private List<GenericPlayerChar> _allUnits = new List<GenericPlayerChar>();
 
 	// Use this for initialization
 	void Start () {
+        GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+        foreach (GameObject unit in players)
+        {
+            _allUnits.Add(unit.GetComponent<GenericPlayerChar>());
+        }
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        foreach (GameObject unit in enemies)
+        {
+            _allUnits.Add(unit.GetComponent<GenericPlayerChar>());
+        }
 
-	}
+        SortByInitiative();
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -19,16 +29,21 @@ public class BattleController : MonoBehaviour {
 
     void SortByInitiative()
     {
-        List<GameObject> battlers = new List<GameObject>();
-        foreach(GenericPlayerChar chara in _chars)
+        Debug.Log("unsort");
+        foreach(GenericPlayerChar a in _allUnits)
         {
-            battlers.Add(chara.gameObject);
-        }
-        foreach(GenericEnemy enemy in _enemies)
-        {
-            battlers.Add(enemy.gameObject);
+            Debug.Log(a.initivative);
         }
 
-        //Sort by initiative
+        _allUnits.Sort(delegate (GenericPlayerChar a, GenericPlayerChar b)
+        {
+            return (b.initivative.CompareTo(a.initivative));
+        });
+
+        Debug.Log("sort");
+        foreach (GenericPlayerChar a in _allUnits)
+        {
+            Debug.Log(a.initivative);
+        }
     }
 }

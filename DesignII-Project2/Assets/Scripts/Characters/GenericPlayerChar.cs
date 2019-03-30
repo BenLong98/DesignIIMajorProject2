@@ -5,17 +5,16 @@ using UnityEngine;
 public class GenericPlayerChar : MonoBehaviour
 {
     private int _health;
-    protected int _maxHealth;
+    [SerializeField] private int _maxHealth;
 
-    protected int _attack;
-    protected int _defense;
-    protected int _initiative;
-    protected int _accuracy;
+    [SerializeField] private int _attack;
+    [SerializeField] private int _defense;
+    [SerializeField] private int _initiative;
+    [SerializeField] private int _accuracy;
 
     public int health
     {
         get { return _health; }
-        set { _health = value; }
     }
 
     public int attack
@@ -43,7 +42,12 @@ public class GenericPlayerChar : MonoBehaviour
         get { return _maxHealth; }
     }
 
-	public void Hurt(int howHurt)
+    private void Start()
+    {
+        _health = _maxHealth;
+    }
+
+    public void Hurt(int howHurt)
     {
         _health -= howHurt;
     }

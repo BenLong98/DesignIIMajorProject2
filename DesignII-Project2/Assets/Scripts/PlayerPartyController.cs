@@ -4,21 +4,32 @@ using UnityEngine;
 
 public class PlayerPartyController : MonoBehaviour {
 
-    [SerializeField] private List<GenericPlayerChar> _characters = new List<GenericPlayerChar>();
-    private List<GenericPlayerChar> _party = new List<GenericPlayerChar>();
-
-    public List<GenericPlayerChar> party
-    {
-        get { return _party; }
-    }
+    public static PlayerPartyController instance;
 
 	// Use this for initialization
 	void Start () {
-		
+        if(instance != null)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            instance = this;
+        }
+
+        DontDestroyOnLoad(gameObject);
+        
+        //uncomment this out if you're done testing
+        //gameObject.SetActive(false);
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+	public void StartBattle()
+    {
+        gameObject.SetActive(true);
+    }
+
+    public void EndBattle()
+    {
+        gameObject.SetActive(false);
+    }
 }

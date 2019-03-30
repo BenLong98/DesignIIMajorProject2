@@ -969,7 +969,6 @@ GameObject:
   - component: {fileID: 114356132093458324}
   - component: {fileID: 114322307907469208}
   - component: {fileID: 114806073306014294}
-  - component: {fileID: 114137436011948678}
   m_Layer: 0
   m_Name: Ranger
   m_TagString: Untagged
@@ -3416,17 +3415,6 @@ MonoBehaviour:
   Firearm: {fileID: 114774458802297728}
   BowShooting: {fileID: 114373166534543186}
   LayerManager: {fileID: 114806073306014294}
---- !u!114 &114137436011948678
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1637241502528832}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 39129064d396aa24d8f2258a05ec1bab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114179639423417760
 MonoBehaviour:
   m_ObjectHideFlags: 1
