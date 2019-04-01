@@ -125,7 +125,7 @@ GameObject:
   - component: {fileID: 4169758}
   m_Layer: 5
   m_Name: attackStatText
-  m_TagString: Spot1
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -273,6 +273,81 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!1 &6738905
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6738906}
+  - component: {fileID: 6738908}
+  - component: {fileID: 6738907}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &6738906
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 6738905}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 636307084}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.000022888184, y: 0.000005722046}
+  m_SizeDelta: {x: 112.4, y: 54.93}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &6738907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 6738905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: b3094046c8a6e1d48a23719fec1d79cd, type: 3}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Heal All Allies
+--- !u!222 &6738908
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 6738905}
+  m_CullTransparentMesh: 0
 --- !u!1 &35808154
 GameObject:
   m_ObjectHideFlags: 0
@@ -430,7 +505,7 @@ GameObject:
   - component: {fileID: 45964257}
   m_Layer: 5
   m_Name: accuracyStatText
-  m_TagString: Spot3
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -505,7 +580,7 @@ GameObject:
   - component: {fileID: 64039529}
   m_Layer: 5
   m_Name: intitiativeStatText
-  m_TagString: Spot1
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -580,7 +655,7 @@ GameObject:
   - component: {fileID: 66208296}
   m_Layer: 5
   m_Name: accuracyText
-  m_TagString: Spot6
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -655,7 +730,7 @@ GameObject:
   - component: {fileID: 108880320}
   m_Layer: 5
   m_Name: moveText
-  m_TagString: Spot2
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -838,7 +913,7 @@ GameObject:
   - component: {fileID: 135419461}
   m_Layer: 5
   m_Name: accuracyStatText
-  m_TagString: Spot6
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -913,7 +988,7 @@ GameObject:
   - component: {fileID: 137613769}
   m_Layer: 5
   m_Name: intitiativeStatText
-  m_TagString: Spot3
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1237,7 +1312,7 @@ GameObject:
   - component: {fileID: 173477785}
   m_Layer: 5
   m_Name: initiativeText
-  m_TagString: Spot3
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1300,6 +1375,81 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 173477783}
   m_CullTransparentMesh: 0
+--- !u!1 &178260993
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 178260994}
+  - component: {fileID: 178260996}
+  - component: {fileID: 178260995}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &178260994
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 178260993}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 791123508}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.000022888184, y: 0.000005722046}
+  m_SizeDelta: {x: 112.4, y: 54.93}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &178260995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 178260993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: b3094046c8a6e1d48a23719fec1d79cd, type: 3}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Taunt All Enemies Until Next Turn
+--- !u!222 &178260996
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 178260993}
+  m_CullTransparentMesh: 0
 --- !u!1 &179773550
 GameObject:
   m_ObjectHideFlags: 0
@@ -1312,7 +1462,7 @@ GameObject:
   - component: {fileID: 179773552}
   m_Layer: 5
   m_Name: moveText
-  m_TagString: Spot1
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1386,7 +1536,7 @@ GameObject:
   - component: {fileID: 183879511}
   m_Layer: 5
   m_Name: defenseStatBar
-  m_TagString: Spot3
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1506,7 +1656,7 @@ GameObject:
   - component: {fileID: 191644366}
   m_Layer: 5
   m_Name: accuracyText
-  m_TagString: Spot3
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1650,7 +1800,7 @@ GameObject:
   - component: {fileID: 225830949}
   m_Layer: 5
   m_Name: attackStatText
-  m_TagString: Spot6
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1834,7 +1984,7 @@ GameObject:
   - component: {fileID: 232973522}
   m_Layer: 5
   m_Name: defenseStatText
-  m_TagString: Spot1
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1978,7 +2128,7 @@ GameObject:
   - component: {fileID: 282107372}
   m_Layer: 5
   m_Name: characterNameText
-  m_TagString: Spot6
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2109,7 +2259,7 @@ GameObject:
   - component: {fileID: 307778948}
   m_Layer: 5
   m_Name: characterNameText
-  m_TagString: Spot3
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2285,7 +2435,7 @@ GameObject:
   - component: {fileID: 318322233}
   m_Layer: 5
   m_Name: defenseStatBar
-  m_TagString: Spot2
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2393,6 +2543,76 @@ RectTransform:
   m_AnchoredPosition: {x: -0.08999634, y: 0}
   m_SizeDelta: {x: -2.5, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &321107757
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 321107758}
+  - component: {fileID: 321107760}
+  - component: {fileID: 321107759}
+  m_Layer: 5
+  m_Name: toolTip3Panel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &321107758
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 321107757}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalScale: {x: 0.99986345, y: 0.99986345, z: 0.99986345}
+  m_Children:
+  - {fileID: 394553269}
+  m_Father: {fileID: 1151005766}
+  m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -2, y: -7}
+  m_SizeDelta: {x: 109.649994, y: 55}
+  m_Pivot: {x: 1, y: 1}
+--- !u!114 &321107759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 321107757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.5377358, g: 0.5377358, b: 0.5377358, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &321107760
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 321107757}
+  m_CullTransparentMesh: 0
 --- !u!1 &325811552
 GameObject:
   m_ObjectHideFlags: 0
@@ -2555,7 +2775,7 @@ GameObject:
   - component: {fileID: 336989557}
   m_Layer: 5
   m_Name: attackStatText
-  m_TagString: Spot3
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2753,7 +2973,7 @@ GameObject:
   - component: {fileID: 345829154}
   m_Layer: 5
   m_Name: healthText
-  m_TagString: Spot2
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2862,7 +3082,7 @@ GameObject:
   - component: {fileID: 361429710}
   m_Layer: 5
   m_Name: defenseStatText
-  m_TagString: Spot5
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2937,7 +3157,7 @@ GameObject:
   - component: {fileID: 365072623}
   m_Layer: 5
   m_Name: healthText
-  m_TagString: Spot5
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3216,7 +3436,7 @@ GameObject:
   - component: {fileID: 375838382}
   m_Layer: 5
   m_Name: initiativeStatBar
-  m_TagString: Spot6
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3376,7 +3596,7 @@ GameObject:
   - component: {fileID: 386397154}
   - component: {fileID: 386397153}
   m_Layer: 5
-  m_Name: move2Image
+  m_Name: move2ImageSlot3
   m_TagString: Spot3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3512,7 +3732,7 @@ GameObject:
   - component: {fileID: 393902329}
   m_Layer: 5
   m_Name: accuracyText
-  m_TagString: Spot2
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3574,6 +3794,81 @@ CanvasRenderer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 393902327}
+  m_CullTransparentMesh: 0
+--- !u!1 &394553268
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 394553269}
+  - component: {fileID: 394553271}
+  - component: {fileID: 394553270}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &394553269
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 394553268}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 321107758}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.000022888184, y: 0.000005722046}
+  m_SizeDelta: {x: 112.4, y: 54.93}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &394553270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 394553268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: b3094046c8a6e1d48a23719fec1d79cd, type: 3}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Give Ally Defense Boost
+--- !u!222 &394553271
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 394553268}
   m_CullTransparentMesh: 0
 --- !u!1 &408058536
 GameObject:
@@ -3784,7 +4079,7 @@ GameObject:
   - component: {fileID: 409056019}
   m_Layer: 5
   m_Name: defenseStatBar
-  m_TagString: Spot1
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3870,7 +4165,7 @@ GameObject:
   - component: {fileID: 409105613}
   m_Layer: 5
   m_Name: characterNameText
-  m_TagString: Spot5
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4105,6 +4400,81 @@ RectTransform:
   m_AnchoredPosition: {x: -0.08999634, y: 0}
   m_SizeDelta: {x: -2.5, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &461430624
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 461430625}
+  - component: {fileID: 461430627}
+  - component: {fileID: 461430626}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &461430625
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 461430624}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2032512678}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.000022888184, y: 0.000005722046}
+  m_SizeDelta: {x: 112.4, y: 54.93}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &461430626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 461430624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: b3094046c8a6e1d48a23719fec1d79cd, type: 3}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Fireball Entire Enemy Party
+--- !u!222 &461430627
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 461430624}
+  m_CullTransparentMesh: 0
 --- !u!1 &470248183
 GameObject:
   m_ObjectHideFlags: 0
@@ -4117,7 +4487,7 @@ GameObject:
   - component: {fileID: 470248185}
   m_Layer: 5
   m_Name: defenseStatText
-  m_TagString: Spot6
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4260,6 +4630,7 @@ RectTransform:
   - {fileID: 4699782}
   - {fileID: 1237278374}
   - {fileID: 1885602146}
+  - {fileID: 657378748}
   m_Father: {fileID: 1424319150}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4313,7 +4684,7 @@ GameObject:
   - component: {fileID: 492789582}
   m_Layer: 5
   m_Name: accuracyStatBar
-  m_TagString: Spot6
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4398,7 +4769,7 @@ GameObject:
   - component: {fileID: 497292149}
   m_Layer: 5
   m_Name: initiativeStatBar
-  m_TagString: Spot1
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4751,7 +5122,7 @@ GameObject:
   - component: {fileID: 556304289}
   m_Layer: 5
   m_Name: moveText
-  m_TagString: Spot6
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5138,7 +5509,7 @@ GameObject:
   - component: {fileID: 605456823}
   - component: {fileID: 605456822}
   m_Layer: 5
-  m_Name: move2Image
+  m_Name: move2ImageSlot5
   m_TagString: Spot5
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5277,7 +5648,7 @@ GameObject:
   - component: {fileID: 616795142}
   m_Layer: 5
   m_Name: accuracyStatText
-  m_TagString: Spot1
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5350,8 +5721,9 @@ GameObject:
   - component: {fileID: 620114372}
   - component: {fileID: 620114374}
   - component: {fileID: 620114373}
+  - component: {fileID: 620114376}
   m_Layer: 5
-  m_Name: move2Image
+  m_Name: move2ImageSlot6
   m_TagString: Spot6
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5409,6 +5781,18 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 620114371}
   m_CullTransparentMesh: 0
+--- !u!65 &620114376
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 620114371}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &626036198
 GameObject:
   m_ObjectHideFlags: 0
@@ -5454,7 +5838,7 @@ GameObject:
   - component: {fileID: 631042248}
   m_Layer: 5
   m_Name: moveText
-  m_TagString: Spot3
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5528,7 +5912,7 @@ GameObject:
   - component: {fileID: 632255037}
   m_Layer: 5
   m_Name: healthStatBar
-  m_TagString: Spot5
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5733,6 +6117,76 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4316487028390270, guid: 1467e130dbf60574eb65ea5570b2e0a8,
     type: 2}
   m_PrefabInternal: {fileID: 634917193}
+--- !u!1 &636307083
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 636307084}
+  - component: {fileID: 636307086}
+  - component: {fileID: 636307085}
+  m_Layer: 5
+  m_Name: toolTip2Panel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &636307084
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 636307083}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalScale: {x: 0.99986345, y: 0.99986345, z: 0.99986345}
+  m_Children:
+  - {fileID: 6738906}
+  m_Father: {fileID: 1330141806}
+  m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -2, y: -7}
+  m_SizeDelta: {x: 109.649994, y: 55}
+  m_Pivot: {x: 1, y: 1}
+--- !u!114 &636307085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 636307083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.5377358, g: 0.5377358, b: 0.5377358, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &636307086
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 636307083}
+  m_CullTransparentMesh: 0
 --- !u!1 &643273203
 GameObject:
   m_ObjectHideFlags: 0
@@ -5836,6 +6290,76 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 647003131}
   m_CullTransparentMesh: 0
+--- !u!1 &657378747
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 657378748}
+  - component: {fileID: 657378750}
+  - component: {fileID: 657378749}
+  m_Layer: 5
+  m_Name: toolTip4Panel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &657378748
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 657378747}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalScale: {x: 0.99986345, y: 0.99986345, z: 0.99986345}
+  m_Children:
+  - {fileID: 1442777998}
+  m_Father: {fileID: 479480372}
+  m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -2, y: -7}
+  m_SizeDelta: {x: 109.649994, y: 55}
+  m_Pivot: {x: 1, y: 1}
+--- !u!114 &657378749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 657378747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.5377358, g: 0.5377358, b: 0.5377358, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &657378750
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 657378747}
+  m_CullTransparentMesh: 0
 --- !u!1 &661413701
 GameObject:
   m_ObjectHideFlags: 0
@@ -5915,7 +6439,7 @@ GameObject:
   - component: {fileID: 685281038}
   m_Layer: 5
   m_Name: attackText
-  m_TagString: Spot6
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6059,7 +6583,7 @@ GameObject:
   - component: {fileID: 698804365}
   m_Layer: 5
   m_Name: defenseText
-  m_TagString: Spot2
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6271,7 +6795,7 @@ GameObject:
   - component: {fileID: 731038380}
   m_Layer: 5
   m_Name: accuracyStatBar
-  m_TagString: Spot2
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6459,6 +6983,7 @@ RectTransform:
   - {fileID: 1625390721}
   - {fileID: 497292148}
   - {fileID: 937332736}
+  - {fileID: 791123508}
   m_Father: {fileID: 1424319150}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6563,6 +7088,76 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &791123507
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 791123508}
+  - component: {fileID: 791123510}
+  - component: {fileID: 791123509}
+  m_Layer: 5
+  m_Name: toolTip1Panel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &791123508
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 791123507}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalScale: {x: 0.99986345, y: 0.99986345, z: 0.99986345}
+  m_Children:
+  - {fileID: 178260994}
+  m_Father: {fileID: 745667096}
+  m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -2, y: -7}
+  m_SizeDelta: {x: 109.649994, y: 55}
+  m_Pivot: {x: 1, y: 1}
+--- !u!114 &791123509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 791123507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.5377358, g: 0.5377358, b: 0.5377358, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &791123510
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 791123507}
+  m_CullTransparentMesh: 0
 --- !u!1 &804948398
 GameObject:
   m_ObjectHideFlags: 0
@@ -6649,7 +7244,7 @@ GameObject:
   - component: {fileID: 814258716}
   m_Layer: 5
   m_Name: initiativeStatBar
-  m_TagString: Spot5
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6735,7 +7330,7 @@ GameObject:
   - component: {fileID: 818265123}
   m_Layer: 5
   m_Name: healthStatText
-  m_TagString: Spot1
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6843,7 +7438,7 @@ GameObject:
   - component: {fileID: 828555323}
   m_Layer: 5
   m_Name: accuracyStatText
-  m_TagString: Spot5
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6953,6 +7548,7 @@ RectTransform:
   - {fileID: 375838381}
   - {fileID: 1498347002}
   - {fileID: 1212121926}
+  - {fileID: 2032512678}
   m_Father: {fileID: 1424319150}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7190,7 +7786,7 @@ GameObject:
   - component: {fileID: 860648246}
   m_Layer: 5
   m_Name: attackStatBar
-  m_TagString: Spot3
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7639,7 +8235,7 @@ GameObject:
   - component: {fileID: 925230294}
   m_Layer: 5
   m_Name: attackStatBar
-  m_TagString: Spot5
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7725,7 +8321,7 @@ GameObject:
   - component: {fileID: 937332737}
   m_Layer: 5
   m_Name: characterNameText
-  m_TagString: Spot1
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7800,7 +8396,7 @@ GameObject:
   - component: {fileID: 939264055}
   m_Layer: 5
   m_Name: initiativeText
-  m_TagString: Spot1
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7950,7 +8546,7 @@ GameObject:
   - component: {fileID: 952981668}
   m_Layer: 5
   m_Name: initiativeText
-  m_TagString: Spot2
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8128,7 +8724,7 @@ GameObject:
   - component: {fileID: 972409300}
   m_Layer: 5
   m_Name: attackText
-  m_TagString: Spot3
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8224,6 +8820,81 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &993741775
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 993741776}
+  - component: {fileID: 993741778}
+  - component: {fileID: 993741777}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &993741776
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 993741775}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1561837239}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.000022888184, y: 0.000005722046}
+  m_SizeDelta: {x: 112.4, y: 54.93}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &993741777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 993741775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: b3094046c8a6e1d48a23719fec1d79cd, type: 3}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Next Enemy Attack Auto Misses Rogue
+--- !u!222 &993741778
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 993741775}
+  m_CullTransparentMesh: 0
 --- !u!1 &999725949
 GameObject:
   m_ObjectHideFlags: 0
@@ -8388,7 +9059,7 @@ GameObject:
   - component: {fileID: 1014196903}
   m_Layer: 5
   m_Name: defenseText
-  m_TagString: Spot6
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8531,7 +9202,7 @@ GameObject:
   - component: {fileID: 1056046180}
   m_Layer: 5
   m_Name: defenseStatText
-  m_TagString: Spot2
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8606,7 +9277,7 @@ GameObject:
   - component: {fileID: 1103917498}
   m_Layer: 5
   m_Name: defenseText
-  m_TagString: Spot5
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8963,7 +9634,7 @@ GameObject:
   - component: {fileID: 1129601907}
   m_Layer: 5
   m_Name: healthStatText
-  m_TagString: Spot5
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9107,7 +9778,7 @@ GameObject:
   - component: {fileID: 1149185199}
   m_Layer: 5
   m_Name: defenseText
-  m_TagString: Spot1
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9217,6 +9888,7 @@ RectTransform:
   - {fileID: 1444634523}
   - {fileID: 860648245}
   - {fileID: 2040152091}
+  - {fileID: 321107758}
   m_Father: {fileID: 1424319150}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9305,7 +9977,7 @@ GameObject:
   - component: {fileID: 1159733435}
   m_Layer: 5
   m_Name: attackText
-  m_TagString: Spot2
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9379,7 +10051,7 @@ GameObject:
   - component: {fileID: 1176140065}
   m_Layer: 5
   m_Name: accuracyStatBar
-  m_TagString: Spot1
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9531,7 +10203,7 @@ GameObject:
   - component: {fileID: 1212121927}
   m_Layer: 5
   m_Name: healthStatBar
-  m_TagString: Spot6
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9702,7 +10374,7 @@ GameObject:
   - component: {fileID: 1241743720}
   m_Layer: 5
   m_Name: attackText
-  m_TagString: Spot5
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9931,7 +10603,7 @@ GameObject:
   - component: {fileID: 1260763359}
   m_Layer: 5
   m_Name: defenseStatBar
-  m_TagString: Spot6
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10154,7 +10826,7 @@ GameObject:
   - component: {fileID: 1287244012}
   m_Layer: 5
   m_Name: accuracyStatBar
-  m_TagString: Spot3
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10325,7 +10997,7 @@ GameObject:
   - component: {fileID: 1297193653}
   m_Layer: 5
   m_Name: move1Image
-  m_TagString: Untagged
+  m_TagString: Spot4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10394,7 +11066,7 @@ GameObject:
   - component: {fileID: 1307560223}
   m_Layer: 5
   m_Name: healthText
-  m_TagString: Spot1
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10490,6 +11162,62 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1315304362
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1315304364}
+  - component: {fileID: 1315304363}
+  m_Layer: 0
+  m_Name: toolTipController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1315304363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1315304362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf3d39324b5b7c641aefe9d9f1cee3dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toolTips:
+  - {fileID: 1319553365}
+  - {fileID: 1814789634}
+  - {fileID: 386397151}
+  - {fileID: 2106512076}
+  - {fileID: 605456820}
+  - {fileID: 620114371}
+  toolTipsPanel:
+  - {fileID: 791123507}
+  - {fileID: 636307083}
+  - {fileID: 321107757}
+  - {fileID: 657378747}
+  - {fileID: 1561837238}
+  - {fileID: 2032512677}
+  m_Raycaster: {fileID: 2011685761}
+  m_EventSystem: {fileID: 751600689}
+--- !u!4 &1315304364
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1315304362}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.9657497, y: -0.23923188, z: 0.07548714}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1318142747
 GameObject:
   m_ObjectHideFlags: 0
@@ -10534,7 +11262,7 @@ GameObject:
   - component: {fileID: 1319553368}
   - component: {fileID: 1319553367}
   m_Layer: 5
-  m_Name: move2image
+  m_Name: move2imageSlot1
   m_TagString: Spot1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10728,6 +11456,7 @@ RectTransform:
   - {fileID: 1911823792}
   - {fileID: 2038406943}
   - {fileID: 1922278943}
+  - {fileID: 636307084}
   m_Father: {fileID: 1424319150}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10851,7 +11580,7 @@ GameObject:
   - component: {fileID: 1351391929}
   m_Layer: 5
   m_Name: moveText
-  m_TagString: Spot5
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10995,7 +11724,7 @@ GameObject:
   - component: {fileID: 1360506787}
   m_Layer: 5
   m_Name: characterNameText
-  m_TagString: Spot2
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11070,7 +11799,7 @@ GameObject:
   - component: {fileID: 1363111097}
   m_Layer: 5
   m_Name: initiativeText
-  m_TagString: Spot5
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11496,7 +12225,7 @@ GameObject:
   - component: {fileID: 1421557095}
   m_Layer: 5
   m_Name: accuracyText
-  m_TagString: Spot1
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11811,6 +12540,81 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1430901512}
   m_CullTransparentMesh: 0
+--- !u!1 &1442777997
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1442777998}
+  - component: {fileID: 1442778000}
+  - component: {fileID: 1442777999}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1442777998
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1442777997}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 657378748}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.000022888184, y: 0.000005722046}
+  m_SizeDelta: {x: 112.4, y: 54.93}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1442777999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1442777997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: b3094046c8a6e1d48a23719fec1d79cd, type: 3}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Devastating Precision Shot
+--- !u!222 &1442778000
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1442777997}
+  m_CullTransparentMesh: 0
 --- !u!1 &1444305850
 GameObject:
   m_ObjectHideFlags: 0
@@ -11891,7 +12695,7 @@ GameObject:
   - component: {fileID: 1444634524}
   m_Layer: 5
   m_Name: initiativeStatBar
-  m_TagString: Spot3
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12115,7 +12919,7 @@ GameObject:
   - component: {fileID: 1464485141}
   m_Layer: 5
   m_Name: intitiativeStatText
-  m_TagString: Spot6
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12258,7 +13062,7 @@ GameObject:
   - component: {fileID: 1498347003}
   m_Layer: 5
   m_Name: attackStatBar
-  m_TagString: Spot6
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12482,7 +13286,7 @@ GameObject:
   - component: {fileID: 1531841018}
   m_Layer: 5
   m_Name: initiativeText
-  m_TagString: Spot6
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12557,7 +13361,7 @@ GameObject:
   - component: {fileID: 1538386850}
   m_Layer: 5
   m_Name: healthText
-  m_TagString: Spot6
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12829,6 +13633,76 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1560157744}
   m_CullTransparentMesh: 0
+--- !u!1 &1561837238
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1561837239}
+  - component: {fileID: 1561837241}
+  - component: {fileID: 1561837240}
+  m_Layer: 5
+  m_Name: toolTip5Panel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1561837239
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1561837238}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalScale: {x: 0.99986345, y: 0.99986345, z: 0.99986345}
+  m_Children:
+  - {fileID: 993741776}
+  m_Father: {fileID: 1833283066}
+  m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -2, y: -7}
+  m_SizeDelta: {x: 109.649994, y: 55}
+  m_Pivot: {x: 1, y: 1}
+--- !u!114 &1561837240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1561837238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.5377358, g: 0.5377358, b: 0.5377358, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &1561837241
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1561837238}
+  m_CullTransparentMesh: 0
 --- !u!1 &1565532999
 GameObject:
   m_ObjectHideFlags: 0
@@ -12841,7 +13715,7 @@ GameObject:
   - component: {fileID: 1565533001}
   m_Layer: 5
   m_Name: attackText
-  m_TagString: Spot1
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13107,7 +13981,7 @@ GameObject:
   - component: {fileID: 1625390722}
   m_Layer: 5
   m_Name: healthStatBar
-  m_TagString: Spot1
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13193,7 +14067,7 @@ GameObject:
   - component: {fileID: 1626543687}
   m_Layer: 5
   m_Name: accuracyText
-  m_TagString: Spot5
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13268,7 +14142,7 @@ GameObject:
   - component: {fileID: 1639425872}
   m_Layer: 5
   m_Name: intitiativeStatText
-  m_TagString: Spot5
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13342,7 +14216,7 @@ GameObject:
   - component: {fileID: 1651694895}
   m_Layer: 5
   m_Name: defenseStatBar
-  m_TagString: Spot5
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13743,7 +14617,7 @@ GameObject:
   - component: {fileID: 1693212889}
   m_Layer: 5
   m_Name: intitiativeStatText
-  m_TagString: Spot2
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14672,7 +15546,7 @@ GameObject:
   - component: {fileID: 1775334705}
   m_Layer: 5
   m_Name: defenseText
-  m_TagString: Spot3
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14747,7 +15621,7 @@ GameObject:
   - component: {fileID: 1789507045}
   m_Layer: 5
   m_Name: healthStatText
-  m_TagString: Spot3
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14822,7 +15696,7 @@ GameObject:
   - component: {fileID: 1806503466}
   m_Layer: 5
   m_Name: healthText
-  m_TagString: Spot3
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15034,7 +15908,7 @@ GameObject:
   - component: {fileID: 1814789637}
   - component: {fileID: 1814789636}
   m_Layer: 5
-  m_Name: move2Image
+  m_Name: move2ImageSlot2
   m_TagString: Spot2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15138,7 +16012,7 @@ GameObject:
   - component: {fileID: 1832093448}
   m_Layer: 5
   m_Name: attackStatText
-  m_TagString: Spot5
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15248,6 +16122,7 @@ RectTransform:
   - {fileID: 814258715}
   - {fileID: 925230293}
   - {fileID: 632255036}
+  - {fileID: 1561837239}
   m_Father: {fileID: 1424319150}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -15565,7 +16440,7 @@ GameObject:
   - component: {fileID: 1880398294}
   m_Layer: 5
   m_Name: accuracyStatBar
-  m_TagString: Spot5
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15651,7 +16526,7 @@ GameObject:
   - component: {fileID: 1883974431}
   m_Layer: 5
   m_Name: healthStatText
-  m_TagString: Spot6
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16225,7 +17100,7 @@ GameObject:
   - component: {fileID: 1911823793}
   m_Layer: 5
   m_Name: initiativeStatBar
-  m_TagString: Spot2
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16343,7 +17218,7 @@ GameObject:
   - component: {fileID: 1922278944}
   m_Layer: 5
   m_Name: healthStatBar
-  m_TagString: Spot2
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16635,7 +17510,7 @@ GameObject:
   - component: {fileID: 1950125340}
   m_Layer: 5
   m_Name: attackStatBar
-  m_TagString: Spot1
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16954,6 +17829,76 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2032512677
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2032512678}
+  - component: {fileID: 2032512680}
+  - component: {fileID: 2032512679}
+  m_Layer: 5
+  m_Name: toolTip6Panel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &2032512678
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2032512677}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 461430625}
+  m_Father: {fileID: 830201458}
+  m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -2, y: -7}
+  m_SizeDelta: {x: 112.4, y: 54.929993}
+  m_Pivot: {x: 1, y: 1}
+--- !u!114 &2032512679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2032512677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.5377358, g: 0.5377358, b: 0.5377358, a: 0.92156863}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &2032512680
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2032512677}
+  m_CullTransparentMesh: 0
 --- !u!1 &2038406942
 GameObject:
   m_ObjectHideFlags: 0
@@ -16965,7 +17910,7 @@ GameObject:
   - component: {fileID: 2038406944}
   m_Layer: 5
   m_Name: attackStatBar
-  m_TagString: Spot2
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17050,7 +17995,7 @@ GameObject:
   - component: {fileID: 2040152092}
   m_Layer: 5
   m_Name: healthStatBar
-  m_TagString: Spot3
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17136,7 +18081,7 @@ GameObject:
   - component: {fileID: 2047379085}
   m_Layer: 5
   m_Name: attackStatText
-  m_TagString: Spot2
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17211,7 +18156,7 @@ GameObject:
   - component: {fileID: 2047880819}
   m_Layer: 5
   m_Name: healthStatText
-  m_TagString: Spot2
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17596,7 +18541,7 @@ GameObject:
   - component: {fileID: 2097502783}
   m_Layer: 5
   m_Name: defenseStatText
-  m_TagString: Spot3
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17671,7 +18616,7 @@ GameObject:
   - component: {fileID: 2103819207}
   m_Layer: 5
   m_Name: accuracyStatText
-  m_TagString: Spot2
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17745,8 +18690,8 @@ GameObject:
   - component: {fileID: 2106512079}
   - component: {fileID: 2106512078}
   m_Layer: 5
-  m_Name: move2Image
-  m_TagString: Untagged
+  m_Name: move2ImageSlot4
+  m_TagString: Spot4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
