@@ -98,6 +98,7 @@
     <Compile Include="Assets\HeroEditor\FantasyMonsters\TestRoom\Scarecrow\Scarecrow.cs" />
     <Compile Include="Assets\HeroEditor\SpriteSheetMaker\SpriteSheetMaker.cs" />
     <Compile Include="Assets\Scripts\BattleController.cs" />
+    <Compile Include="Assets\Scripts\Characters\Attack.cs" />
     <Compile Include="Assets\Scripts\Characters\GenericEnemy.cs" />
     <Compile Include="Assets\Scripts\Characters\GenericPlayerChar.cs" />
     <Compile Include="Assets\Scripts\Characters\Healthbar.cs" />

@@ -49,6 +49,8 @@ public class GenericPlayerChar : MonoBehaviour
 
     public void Hurt(int howHurt)
     {
+        if (howHurt < 0)
+            howHurt = 0;
         _health -= howHurt;
     }
 

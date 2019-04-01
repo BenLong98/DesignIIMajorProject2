@@ -698,6 +698,7 @@ GameObject:
   - component: {fileID: 114940376376821408}
   - component: {fileID: 114574943344568858}
   - component: {fileID: 114610742103167076}
+  - component: {fileID: 65847374854186558}
   m_Layer: 0
   m_Name: Sorcerer
   m_TagString: Enemy
@@ -3049,6 +3050,18 @@ Transform:
   m_Father: {fileID: 4549374522413960}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &65847374854186558
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1458763183619386}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.8, y: 3, z: 1}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!82 &82373186921201864
 AudioSource:
   m_ObjectHideFlags: 1
