@@ -5,11 +5,18 @@ using UnityEngine.UI;
 
 public class UIController : MonoBehaviour
 {
-
+    [Header("MainMenuExclusiveUI")]
     public Button gearButton;
     public GameObject gearPanel;
 
-	void Start ()
+    [Header("CharacterSelectionExclusiveUI")]
+    public Button startBattleButton;
+    public Button mainMenuButton;
+
+    [Header("UniversalUI")]
+    public Button quitButton;
+
+    void Start ()
     {
 		
 	}
@@ -36,6 +43,16 @@ public class UIController : MonoBehaviour
     public void OnClickCreditsButton()
     {
         SceneController.instance.CreditsSceneProgression();
+    }
+
+    public void OnClickStartBattleButton()
+    {
+        SceneController.instance.BattleSceneProgression();
+    }
+
+    public void OnClickMainMenuButton()
+    {
+        SceneController.instance.MainMenuSceneProgression();
     }
 
 }

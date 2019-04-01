@@ -42,4 +42,9 @@ public class SceneController : MonoBehaviour
         SceneManager.LoadScene("HelpScene");
     }
 
+    public void BattleSceneProgression()
+    {
+        SceneManager.LoadScene("Battle");
+    }
+
 }
