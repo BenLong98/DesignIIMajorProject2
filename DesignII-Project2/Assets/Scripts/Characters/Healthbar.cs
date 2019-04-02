@@ -23,7 +23,7 @@ public class Healthbar : MonoBehaviour {
         else
         {
             //_healthText = Instantiate(_textPrefab, transform.position + new Vector3(1.4f, 2, 0), Quaternion.identity);
-            _healthSlider = Instantiate(_sliderPrefab, transform.position + new Vector3(1.4f, 2, 0), Quaternion.identity);
+            _healthSlider = Instantiate(_sliderPrefab, transform.position + new Vector3(4.4f, 2, 0), Quaternion.identity);
         }
         //_healthText.transform.parent = GameObject.Find("Canvas").transform;
         //_healthText.text = gameObject.GetComponent<GenericPlayerChar>().health.ToString();
@@ -35,7 +35,9 @@ public class Healthbar : MonoBehaviour {
     void Update()
     {
         //_healthText.text = gameObject.GetComponent<GenericPlayerChar>().health.ToString();
-        _healthSlider.value = gameObject.GetComponent<GenericPlayerChar>().health / 100;
+        //_healthSlider.value = (gameObject.GetComponent<GenericPlayerChar>().health / gameObject.GetComponent<GenericPlayerChar>().maxHealth) * 100;
+        float hpPercent = ((float)gameObject.GetComponent<GenericPlayerChar>().health / gameObject.GetComponent<GenericPlayerChar>().maxHealth) * 100;
+        _healthSlider.value = hpPercent;
     }
 
     private void OnDisable()

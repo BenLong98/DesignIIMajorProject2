@@ -1531,6 +1531,7 @@ GameObject:
   - component: {fileID: 114086056224908186}
   - component: {fileID: 114878676396911922}
   - component: {fileID: 114198809463912922}
+  - component: {fileID: 65162575892185346}
   m_Layer: 0
   m_Name: Cleric
   m_TagString: Player
@@ -3048,6 +3049,18 @@ Transform:
   m_Father: {fileID: 4964823731286348}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &65162575892185346
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1926955452359364}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.8, y: 3, z: 1}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!82 &82788823527401368
 AudioSource:
   m_ObjectHideFlags: 1
@@ -3675,6 +3688,7 @@ MonoBehaviour:
   _defense: 75
   _initiative: 70
   _accuracy: 100
+  _classType: 1
 --- !u!114 &114887394325637392
 MonoBehaviour:
   m_ObjectHideFlags: 1

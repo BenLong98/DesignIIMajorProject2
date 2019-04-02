@@ -5,9 +5,8 @@ using UnityEngine.UI;
 
 public class Attack : MonoBehaviour {
 
-    [SerializeField]
-    private Button _attackButton;
     private bool _isAttacking;
+    private string _targetTag;
 
 	// Use this for initialization
 	void Start () {
@@ -24,13 +23,11 @@ public class Attack : MonoBehaviour {
         RaycastHit hit;
         if(Physics.Raycast(ray, out hit))
         {
-            if (hit.collider.gameObject.tag == "Enemy")
+            if (hit.collider.gameObject.tag == _targetTag)
             {
                 if (Input.GetMouseButtonDown(0))
                 {
-                    //Excuse the formatting, I'm lazy
-                    hit.collider.gameObject.GetComponent<GenericPlayerChar>().Hurt((BattleController.instance.currentChar.attack) - (hit.collider.GetComponent<GenericPlayerChar>().defense));
-                    BattleController.instance.NextTurn();
+                    AttackTarget(hit.collider.gameObject.GetComponent<GenericPlayerChar>());
                 }
 
                 //Do work with turning on the halo
@@ -41,7 +38,43 @@ public class Attack : MonoBehaviour {
     public void OnAttackButtonClick()
     {
         _isAttacking = true;
-        _attackButton.gameObject.SetActive(false);
+        GameObject.Find("UIController").GetComponent<UIController>().SwitchAttachButtonVisibility(false);
+
+        if (BattleController.instance.currentChar.classType == GenericPlayerChar.CharClass.Barbarian
+            || BattleController.instance.currentChar.classType == GenericPlayerChar.CharClass.Knight
+            || BattleController.instance.currentChar.classType == GenericPlayerChar.CharClass.Ranger
+            || BattleController.instance.currentChar.classType == GenericPlayerChar.CharClass.Rogue
+            || BattleController.instance.currentChar.classType == GenericPlayerChar.CharClass.Wizard)
+        {
+            _targetTag = "Enemy";
+        }
+        else if (BattleController.instance.currentChar.classType == GenericPlayerChar.CharClass.Cleric)
+        {
+            _targetTag = "Player";
+        }
+
         Debug.Log("Player attacking...");
+    }
+
+    private void AttackTarget(GenericPlayerChar target)
+    {
+        int chanceToMiss = Random.Range(0, 101);
+        if (chanceToMiss < BattleController.instance.currentChar.accuracy)
+        {
+            if (BattleController.instance.currentChar.classType == GenericPlayerChar.CharClass.Barbarian
+                || BattleController.instance.currentChar.classType == GenericPlayerChar.CharClass.Knight
+                || BattleController.instance.currentChar.classType == GenericPlayerChar.CharClass.Ranger
+                || BattleController.instance.currentChar.classType == GenericPlayerChar.CharClass.Rogue
+                || BattleController.instance.currentChar.classType == GenericPlayerChar.CharClass.Wizard)
+            {
+                target.Hurt((BattleController.instance.currentChar.attack) - (target.defense));
+            }
+            else if (BattleController.instance.currentChar.classType == GenericPlayerChar.CharClass.Cleric)
+            {
+                target.Heal(target.maxHealth / 2);
+            }
+        }
+
+        BattleController.instance.NextTurn();
     }
 }

@@ -971,6 +971,7 @@ GameObject:
   - component: {fileID: 114806073306014294}
   - component: {fileID: 114946971485260392}
   - component: {fileID: 114476407948054930}
+  - component: {fileID: 65728342533125306}
   m_Layer: 0
   m_Name: Ranger
   m_TagString: Player
@@ -3048,6 +3049,18 @@ Transform:
   m_Father: {fileID: 4458206043658934}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &65728342533125306
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1637241502528832}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.8, y: 3, z: 1}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!82 &82398085108465182
 AudioSource:
   m_ObjectHideFlags: 1
@@ -3725,6 +3738,7 @@ MonoBehaviour:
   _defense: 70
   _initiative: 80
   _accuracy: 95
+  _classType: 3
 --- !u!198 &198209308843770882
 ParticleSystem:
   m_ObjectHideFlags: 1

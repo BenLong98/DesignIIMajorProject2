@@ -7,8 +7,6 @@ public class BattleController : MonoBehaviour {
 
     public static BattleController instance;
 
-    [SerializeField]
-    private Button _attackButton;
     private List<GenericPlayerChar> _allUnits = new List<GenericPlayerChar>();
     private GenericPlayerChar _currentChar;
 
@@ -21,7 +19,7 @@ public class BattleController : MonoBehaviour {
 	void Start () {
         instance = this;
 
-        _attackButton.gameObject.SetActive(false);
+        GameObject.Find("UIController").GetComponent<UIController>().SwitchAttachButtonVisibility(false);
 
         GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
         foreach (GameObject unit in players)
@@ -41,22 +39,10 @@ public class BattleController : MonoBehaviour {
 
     void SortByInitiative()
     {
-        Debug.Log("unsort");
-        foreach(GenericPlayerChar a in _allUnits)
-        {
-            Debug.Log(a.initivative);
-        }
-
         _allUnits.Sort(delegate (GenericPlayerChar a, GenericPlayerChar b)
         {
             return (b.initivative.CompareTo(a.initivative));
         });
-
-        Debug.Log("sort");
-        foreach (GenericPlayerChar a in _allUnits)
-        {
-            Debug.Log(a.initivative);
-        }
     }
 
     public void NextTurn()
@@ -64,21 +50,26 @@ public class BattleController : MonoBehaviour {
         _currentChar = _allUnits[0];
         _allUnits.Remove(_currentChar);
 
-        if(_currentChar.health > 0)
+        if (_currentChar.health > 0)
         {
             _allUnits.Add(_currentChar);
 
             if(_currentChar.tag == "Player")
             {
-                Debug.Log("Player turn");
-                _attackButton.gameObject.SetActive(true);
+                Debug.Log("Player turn: " + _currentChar.classType);
+                GameObject.Find("UIController").GetComponent<UIController>().SwitchAttachButtonVisibility(true);
+                GameObject.Find("UIController").GetComponent<UIController>().ChangeAttackButtonText();
             }
             else
             {
                 Debug.Log("Enemy turn");
-                GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
-                int target = Random.Range(0, players.Length - 1);
-                players[target].GetComponent<GenericPlayerChar>().Hurt((currentChar.attack) - (players[target].GetComponent<GenericPlayerChar>().defense));
+                int chanceToMiss = Random.Range(0, 101);
+                if (chanceToMiss < BattleController.instance.currentChar.accuracy)
+                {
+                    GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+                    int target = Random.Range(0, players.Length - 1);
+                    players[target].GetComponent<GenericPlayerChar>().Hurt((currentChar.attack) - (players[target].GetComponent<GenericPlayerChar>().defense));
+                }
                 NextTurn();
             }
         }

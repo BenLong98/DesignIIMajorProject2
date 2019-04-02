@@ -1212,6 +1212,7 @@ GameObject:
   - component: {fileID: 114436201607408642}
   - component: {fileID: 114828938187665886}
   - component: {fileID: 114204267452019290}
+  - component: {fileID: 65637503315950250}
   m_Layer: 0
   m_Name: Rogue
   m_TagString: Player
@@ -3048,6 +3049,18 @@ Transform:
   m_Father: {fileID: 4452269053255200}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &65637503315950250
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1735519301008770}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.8, y: 3, z: 1}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!82 &82619056552673990
 AudioSource:
   m_ObjectHideFlags: 1
@@ -3706,6 +3719,7 @@ MonoBehaviour:
   _defense: 80
   _initiative: 90
   _accuracy: 85
+  _classType: 4
 --- !u!114 &114837816239811566
 MonoBehaviour:
   m_ObjectHideFlags: 1

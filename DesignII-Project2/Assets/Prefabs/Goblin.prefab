@@ -3640,6 +3640,7 @@ MonoBehaviour:
   _defense: 50
   _initiative: 50
   _accuracy: 50
+  _classType: 6
 --- !u!114 &114912162756559790
 MonoBehaviour:
   m_ObjectHideFlags: 1

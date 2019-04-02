@@ -12,6 +12,26 @@ public class GenericPlayerChar : MonoBehaviour
     [SerializeField] private int _initiative;
     [SerializeField] private int _accuracy;
 
+    [SerializeField] private CharClass _classType;
+
+    public enum CharClass
+    {
+        Barbarian,
+        Cleric,
+        Knight,
+        Ranger,
+        Rogue,
+        Wizard,
+        Goblin,
+        Orc,
+        Sorcerer
+    }
+
+    public CharClass classType
+    {
+        get { return _classType; }
+    }
+
     public int health
     {
         get { return _health; }
