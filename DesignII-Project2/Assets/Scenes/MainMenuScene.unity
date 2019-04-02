@@ -452,7 +452,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 5c2c9c5e21915f642a4c4bc5e3b4cd17, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -764,7 +764,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24b48f9720cab0744b4fe77d74d6736f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startBattleButton: {fileID: 0}
+  attack1Button: {fileID: 0}
+  attack2Button: {fileID: 0}
+  resultsText: {fileID: 0}
+  quitButton: {fileID: 0}
   gearButton: {fileID: 679660959}
+  mainMenuButton: {fileID: 0}
   gearPanel: {fileID: 142793322}
 --- !u!4 &464700290
 Transform:
@@ -1303,7 +1309,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 9efa10f2b1ae63d45912d9b3a516324c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 47156703982775041b11eae38fcce66c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2621,7 +2627,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 5c2c9c5e21915f642a4c4bc5e3b4cd17, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2860,7 +2866,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 5c2c9c5e21915f642a4c4bc5e3b4cd17, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
