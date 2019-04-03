@@ -47,4 +47,9 @@ public class SceneController : MonoBehaviour
         SceneManager.LoadScene("Battle");
     }
 
+    public void CharacterSelectionSceneProgression()
+    {
+        SceneManager.LoadScene("CharacterSelectionScene");
+    }
+
 }

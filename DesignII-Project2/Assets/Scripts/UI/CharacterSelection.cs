@@ -7,32 +7,63 @@ using UnityEngine.UI;
 public class CharacterSelection : MonoBehaviour
 {
     [Header("HighlightPanels")]
-    public GameObject spot1HPanel;
-    public GameObject spot2HPanel;
-    public GameObject spot3HPanel;
-    public GameObject spot4HPanel;
-    public GameObject spot5HPanel;
-    public GameObject spot6HPanel;
+    public GameObject[] spotPanels = new GameObject[6];
+
+    public static bool[] highlightIsActive = new bool[6];
+
+    public bool isActive;
+    public bool run;
 
     [SerializeField] GraphicRaycaster m_Raycaster;
     PointerEventData m_PointerEventData;
     [SerializeField] EventSystem m_EventSystem;
 
+    private void Start()
+    {
+        Debug.Log("isActive is " + isActive + " at Start");
+    }
 
     void CheckActivity(GameObject panel)
     {
-        if (panel.activeInHierarchy == true)
+        if (panel.activeSelf == true)
         {
-            panel.SetActive(false);
+            Debug.Log("isActive is " + isActive + " at CheckActivity");
+            isActive = false;
         }
         else
         {
-            panel.SetActive(true);
+            isActive = true;
         }
     }
-	
-	// Update is called once per frame
-	void Update ()
+
+    void OnClick(GameObject panel, int number, bool activity)
+    {
+        CheckActivity(spotPanels[number]);
+        if (isActive == true)
+        {
+            Debug.Log("isActive is " + isActive + " at OnClick");
+            PlayerPartyController.instance.AddCharacter(number);
+            if (PlayerPartyController.notAcceptable == true)
+            {
+                PlayerPartyController.notAcceptable = false;
+                Debug.Log("notAcceptable was true");
+            }
+            else if (PlayerPartyController.notAcceptable == false)
+            {
+                activity = true;
+                highlightIsActive[number] = activity;
+                Debug.Log(activity);
+            }
+        }
+        if (isActive == false)
+        {
+            PlayerPartyController.instance.RemoveCharacter(number);
+            activity = false;
+        }
+    }
+
+    // Update is called once per frame
+    void Update()
     {
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
@@ -41,37 +72,50 @@ public class CharacterSelection : MonoBehaviour
 
             //Create a list of Raycast Results
             List<RaycastResult> results = new List<RaycastResult>();
-            //Debug.Log(results[0]);
+
             m_Raycaster.Raycast(m_PointerEventData, results);
 
             foreach (RaycastResult result in results)
             {
                 if (result.gameObject.transform.tag == "Spot1")
                 {
-                    CheckActivity(spot1HPanel);
+                    OnClick(spotPanels[0], 0, highlightIsActive[0]);
                 }
                 if (result.gameObject.transform.tag == "Spot2")
                 {
-                    CheckActivity(spot2HPanel);
+                    OnClick(spotPanels[1], 1, highlightIsActive[1]);
                 }
                 if (result.gameObject.transform.tag == "Spot3")
                 {
-                    CheckActivity(spot3HPanel);
+                    OnClick(spotPanels[2], 2, highlightIsActive[2]);
                 }
                 if (result.gameObject.transform.tag == "Spot4")
                 {
-                    CheckActivity(spot4HPanel);
+                    OnClick(spotPanels[3], 3, highlightIsActive[3]);
                 }
                 if (result.gameObject.transform.tag == "Spot5")
                 {
-                    CheckActivity(spot5HPanel);
+                    OnClick(spotPanels[4], 4, highlightIsActive[4]);
                 }
                 if (result.gameObject.transform.tag == "Spot6")
                 {
-                    CheckActivity(spot6HPanel);
+                    OnClick(spotPanels[5], 5, highlightIsActive[5]);
                 }
 
             }
         }
+
+        for (int x = 0; x < highlightIsActive.Length; x++)
+        {
+            if (highlightIsActive[x] == true)
+            {
+                spotPanels[x].SetActive(true);
+            }
+            else
+            {
+                spotPanels[x].SetActive(false);
+            }
+        }
+
     }
 }

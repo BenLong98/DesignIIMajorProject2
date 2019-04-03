@@ -14,6 +14,11 @@ public class GenericPlayerChar : MonoBehaviour
 
     [SerializeField] private CharClass _classType;
 
+    private int _originalDefense;
+
+    private bool _isShielded;
+    private bool _isEvading;
+
     public enum CharClass
     {
         Barbarian,

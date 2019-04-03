@@ -38,12 +38,10 @@ public class UIController : MonoBehaviour
         }
     }
 
-
     public void OnClickQuitButton()
     {
         Application.Quit();
     }
-
 
     public void OnClickCreditsButton()
     {
@@ -60,10 +58,15 @@ public class UIController : MonoBehaviour
         SceneController.instance.MainMenuSceneProgression();
     }
 
-    public void SwitchAttachButtonVisibility(bool isActive)
+    public void OnClickPlayButton()
+    {
+        SceneController.instance.CharacterSelectionSceneProgression();
+    }
+
+    public void SwitchAttackButtonVisibility(bool isActive, bool isActive2)
     {
         attack1Button.gameObject.SetActive(isActive);
-        attack2Button.gameObject.SetActive(isActive);
+        attack2Button.gameObject.SetActive(isActive2);
     }
 
     public void ChangeAttackButtonText()
@@ -92,12 +95,12 @@ public class UIController : MonoBehaviour
         else if (BattleController.instance.currentChar.classType == GenericPlayerChar.CharClass.Ranger)
         {
             attack1Button.GetComponentInChildren<Text>().text = "Arrow";
-            attack2Button.GetComponentInChildren<Text>().text = "i forgot";
+            attack2Button.GetComponentInChildren<Text>().text = "Snipe";
         }
         else if (BattleController.instance.currentChar.classType == GenericPlayerChar.CharClass.Rogue)
         {
-            attack1Button.GetComponentInChildren<Text>().text = "i forgot";
-            attack2Button.GetComponentInChildren<Text>().text = "i also forgot";
+            attack1Button.GetComponentInChildren<Text>().text = "Stab";
+            attack2Button.GetComponentInChildren<Text>().text = "Evasion";
         }
         else if (BattleController.instance.currentChar.classType == GenericPlayerChar.CharClass.Wizard)
         {

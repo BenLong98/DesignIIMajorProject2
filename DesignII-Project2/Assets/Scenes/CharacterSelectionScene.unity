@@ -7622,6 +7622,7 @@ MonoBehaviour:
   attack1Button: {fileID: 0}
   attack2Button: {fileID: 0}
   resultsText: {fileID: 0}
+  buttonSprites: []
   quitButton: {fileID: 408058538}
   gearButton: {fileID: 0}
   mainMenuButton: {fileID: 1609423076}
@@ -17808,12 +17809,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89a82280b7850144e8b4f03f99359b00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spot1HPanel: {fileID: 1719014760}
-  spot2HPanel: {fileID: 250103932}
-  spot3HPanel: {fileID: 729985364}
-  spot4HPanel: {fileID: 570764593}
-  spot5HPanel: {fileID: 1105535603}
-  spot6HPanel: {fileID: 647003131}
+  spotPanels:
+  - {fileID: 1719014760}
+  - {fileID: 250103932}
+  - {fileID: 729985364}
+  - {fileID: 570764593}
+  - {fileID: 1105535603}
+  - {fileID: 647003131}
+  isActive: 0
+  run: 0
   m_Raycaster: {fileID: 2011685761}
   m_EventSystem: {fileID: 751600689}
 --- !u!4 &2020242303
