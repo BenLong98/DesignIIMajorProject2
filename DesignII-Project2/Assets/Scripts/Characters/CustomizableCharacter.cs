@@ -25,6 +25,8 @@ public class CustomizableCharacter : MonoBehaviour {
     [SerializeField] Text weaponText;
 
 
+
+
     [SerializeField] SpriteRenderer helmRenderer;
     [SerializeField] SpriteRenderer headRenderer;
     [SerializeField] SpriteRenderer bodyRenderer;
@@ -39,6 +41,7 @@ public class CustomizableCharacter : MonoBehaviour {
     public void Awake()
     {
         DontDestroyOnLoad(this.gameObject);
+
     }
 
     public void Update()
@@ -193,6 +196,7 @@ public class CustomizableCharacter : MonoBehaviour {
     public void CreateCharacter() {
 
         characterCustomizePanel.SetActive(false);
+
 
         player.gameObject.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
         player.gameObject.transform.localPosition = new Vector3(-4f, -3f, 0);

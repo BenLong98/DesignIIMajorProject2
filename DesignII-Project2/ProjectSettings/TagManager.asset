@@ -12,6 +12,9 @@ TagManager:
   - Spot4
   - Spot5
   - Spot6
+  - GameHandler
+  - CanvasMain
+  - EventSystemMain
   layers:
   - Default
   - TransparentFX

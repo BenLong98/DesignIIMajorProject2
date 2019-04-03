@@ -1565,6 +1565,7 @@ MonoBehaviour:
   gearButton: {fileID: 679660959}
   mainMenuButton: {fileID: 0}
   gearPanel: {fileID: 142793322}
+  gameHandler: {fileID: 0}
 --- !u!4 &464700290
 Transform:
   m_ObjectHideFlags: 0
@@ -2526,7 +2527,7 @@ GameObject:
   - component: {fileID: 812561644}
   m_Layer: 0
   m_Name: Canvas
-  m_TagString: Untagged
+  m_TagString: CanvasMain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2961,7 +2962,7 @@ GameObject:
   - component: {fileID: 1065323567}
   m_Layer: 0
   m_Name: GameHandler
-  m_TagString: Untagged
+  m_TagString: GameHandler
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2987,6 +2988,7 @@ MonoBehaviour:
   - {fileID: 1494591530}
   - {fileID: 235874797}
   - {fileID: 2044008841}
+  isInMenu: 1
 --- !u!4 &1065323568
 Transform:
   m_ObjectHideFlags: 0
@@ -3135,7 +3137,7 @@ GameObject:
   - component: {fileID: 1100641838}
   m_Layer: 0
   m_Name: EventSystem
-  m_TagString: Untagged
+  m_TagString: EventSystemMain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

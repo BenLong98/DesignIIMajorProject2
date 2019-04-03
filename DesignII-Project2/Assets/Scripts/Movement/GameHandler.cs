@@ -27,6 +27,8 @@ public class GameHandler : MonoBehaviour {
     [SerializeField] GameObject currentTarget;
     [SerializeField] GameObject[] allWayPoints;
 
+    public bool isInMenu = true;
+
     /// <summary>
     /// Don't destroy when loading scenes
     /// </summary>
@@ -39,6 +41,13 @@ public class GameHandler : MonoBehaviour {
     /// This is to handle the raycasting of the movement of the player based on a waypoint system
     /// </summary>
     void Update () {
+
+        if (isInMenu)
+        {
+            m_EventSystem = GameObject.FindGameObjectWithTag("EventSystemMain").GetComponent<EventSystem>();
+            m_Raycaster = GameObject.FindGameObjectWithTag("CanvasMain").GetComponent<GraphicRaycaster>();
+            player.SetActive(true);
+      
 
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
@@ -62,6 +71,14 @@ public class GameHandler : MonoBehaviour {
                 }
                 
             }
+        }
+
+        }
+        else
+        {
+            m_EventSystem = null;
+            m_Raycaster = null;
+            player.SetActive(false);
         }
     }
 

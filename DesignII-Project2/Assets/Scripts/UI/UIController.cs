@@ -21,10 +21,12 @@ public class UIController : MonoBehaviour
     public Button mainMenuButton;
     public GameObject gearPanel;
 
+    [SerializeField] GameObject gameHandler;
+
     void Start ()
     {
-		
-	}
+        gameHandler = GameObject.FindGameObjectWithTag("GameHandler");
+    }
 
     public void OnClickGearButton()
     {
@@ -60,6 +62,7 @@ public class UIController : MonoBehaviour
 
     public void OnClickPlayButton()
     {
+        gameHandler.GetComponent<GameHandler>().isInMenu = false;
         SceneController.instance.CharacterSelectionSceneProgression();
     }
 
