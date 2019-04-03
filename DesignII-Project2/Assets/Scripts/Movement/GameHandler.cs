@@ -154,7 +154,7 @@ public class GameHandler : MonoBehaviour {
             camContents.SetActive(true);
             gearMain.SetActive(true);
             titleText.SetActive(true);
-            uiController.SetActive(true);
+            uiController.SetActive(true); 
         }
         else
         {

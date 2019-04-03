@@ -52,7 +52,7 @@ public class SceneController : MonoBehaviour
     public void HelpSceneProgression()
     {
         SceneManager.LoadScene("HelpScene");
-    }
+    }  
 
     public void BattleSceneProgression()
     {

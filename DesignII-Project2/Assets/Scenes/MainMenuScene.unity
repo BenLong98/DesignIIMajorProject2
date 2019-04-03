@@ -498,7 +498,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &142793323
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1565,7 +1565,7 @@ MonoBehaviour:
   gearButton: {fileID: 679660959}
   mainMenuButton: {fileID: 0}
   gearPanel: {fileID: 142793322}
-  gameHandler: {fileID: 0}
+  gameHandler: {fileID: 1065323566}
 --- !u!4 &464700290
 Transform:
   m_ObjectHideFlags: 0
