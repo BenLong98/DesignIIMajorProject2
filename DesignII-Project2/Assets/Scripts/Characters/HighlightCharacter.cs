@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 public class HighlightCharacter : MonoBehaviour
 {
-    public Image highlightImage;
+    private Image highlightImage;
+    [SerializeField] Image imagePrefab;
     private Vector3 offset;
     private string classStringName;
 
@@ -35,6 +36,8 @@ public class HighlightCharacter : MonoBehaviour
     void Start ()
     {
         offset.Set(0, 1, 0);
+        highlightImage = Instantiate(imagePrefab);
+        highlightImage.transform.parent = GameObject.Find("Canvas").transform;
         highlightImage.gameObject.transform.position = this.gameObject.transform.position + offset;
         highlightImage.enabled = false;
 

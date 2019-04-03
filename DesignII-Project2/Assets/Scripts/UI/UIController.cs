@@ -13,6 +13,7 @@ public class UIController : MonoBehaviour
     public Button attack1Button;
     public Button attack2Button;
     public Text resultsText;
+    public List<Sprite> buttonSprites;
 
     [Header("UniversalUI")]
     public Button quitButton;
@@ -70,17 +71,23 @@ public class UIController : MonoBehaviour
         if (BattleController.instance.currentChar.classType == GenericPlayerChar.CharClass.Barbarian)
         {
             attack1Button.GetComponentInChildren<Text>().text = "Smash";
+            attack1Button.GetComponent<Image>().sprite = buttonSprites[0];
             attack2Button.GetComponentInChildren<Text>().text = "Aggro";
+            attack2Button.GetComponent<Image>().sprite = buttonSprites[5];
         }
         else if (BattleController.instance.currentChar.classType == GenericPlayerChar.CharClass.Cleric)
         {
             attack1Button.GetComponentInChildren<Text>().text = "Heal One";
+            attack1Button.GetComponent<Image>().sprite = buttonSprites[2];
             attack2Button.GetComponentInChildren<Text>().text = "Heal All";
+            attack2Button.GetComponent<Image>().sprite = buttonSprites[3];
         }
         else if (BattleController.instance.currentChar.classType == GenericPlayerChar.CharClass.Knight)
         {
             attack1Button.GetComponentInChildren<Text>().text = "Slash";
+            attack1Button.GetComponent<Image>().sprite = buttonSprites[0];
             attack2Button.GetComponentInChildren<Text>().text = "Shield";
+            attack2Button.GetComponent<Image>().sprite = buttonSprites[5];
         }
         else if (BattleController.instance.currentChar.classType == GenericPlayerChar.CharClass.Ranger)
         {
