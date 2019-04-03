@@ -37,10 +37,13 @@ public class CustomizableCharacter : MonoBehaviour {
 
     [SerializeField] GameObject characterCustomizePanel;
 
+    [SerializeField] GameObject gameHandler;
+
 
     public void Awake()
     {
         DontDestroyOnLoad(this.gameObject);
+        gameHandler = GameObject.FindGameObjectWithTag("GameHandler");
 
     }
 
@@ -195,8 +198,10 @@ public class CustomizableCharacter : MonoBehaviour {
 
     public void CreateCharacter() {
 
-        characterCustomizePanel.SetActive(false);
+        gameHandler.GetComponent<GameHandler>().menuCounter += 1;
+        gameHandler.GetComponent<GameHandler>().doneCreating = true;
 
+        gameHandler.GetComponent<GameHandler>().CheckMenus();
 
         player.gameObject.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
         player.gameObject.transform.localPosition = new Vector3(-4f, -3f, 0);

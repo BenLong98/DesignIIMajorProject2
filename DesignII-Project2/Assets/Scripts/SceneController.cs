@@ -8,6 +8,7 @@ public class SceneController : MonoBehaviour
     public static SceneController instance; //Singleton Pattern
 
     [SerializeField] string currentScene;
+ 
 
     private void Awake()
     {
@@ -34,7 +35,7 @@ public class SceneController : MonoBehaviour
 
     public void MainMenuSceneProgression()
     {
-        SceneManager.LoadScene("MainMenuScene");
+        SceneManager.LoadScene("MenuAfterCreation");
     }
 
     public void HelpSceneProgression()

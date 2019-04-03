@@ -12,6 +12,9 @@ public class GameHandler : MonoBehaviour {
     //Current Level
     [SerializeField] int level = 0;
 
+    //Current State of Menu
+    public int menuCounter = 0;
+
     //Graphic Raycast Elements
     [SerializeField] GraphicRaycaster m_Raycaster;
     PointerEventData m_PointerEventData;
@@ -27,7 +30,12 @@ public class GameHandler : MonoBehaviour {
     [SerializeField] GameObject currentTarget;
     [SerializeField] GameObject[] allWayPoints;
 
+    [SerializeField] GameObject customizePanel;
+    [SerializeField] Transform childObj;
+    [SerializeField] GameObject camContents;
+
     public bool isInMenu = true;
+    public bool doneCreating = false;
 
     /// <summary>
     /// Don't destroy when loading scenes
@@ -35,6 +43,7 @@ public class GameHandler : MonoBehaviour {
     private void Start()
     {
         DontDestroyOnLoad(this.gameObject);
+        customizePanel = GameObject.FindGameObjectWithTag("CustomCharacter");
     }
 
     /// <summary>
@@ -44,6 +53,8 @@ public class GameHandler : MonoBehaviour {
 
         if (isInMenu)
         {
+            
+
             m_EventSystem = GameObject.FindGameObjectWithTag("EventSystemMain").GetComponent<EventSystem>();
             m_Raycaster = GameObject.FindGameObjectWithTag("CanvasMain").GetComponent<GraphicRaycaster>();
             player.SetActive(true);
@@ -115,6 +126,33 @@ public class GameHandler : MonoBehaviour {
         }
         
        
+    }
+
+
+    public void CheckMenus() {
+        customizePanel = GameObject.FindGameObjectWithTag("CustomCharacter");
+        childObj = customizePanel.transform.Find("Contents");
+
+        if (menuCounter % 2 == 0)
+        {
+            if (doneCreating)
+            {
+                childObj.gameObject.SetActive(false);
+                customizePanel.GetComponent<Image>().enabled = false;
+            }
+            else {
+                childObj.gameObject.SetActive(true);
+                customizePanel.GetComponent<Image>().enabled = true;
+            }
+            
+            camContents.SetActive(true);
+        }
+        else
+        {
+            camContents.SetActive(false);
+            customizePanel.GetComponent<Image>().enabled = false;
+            childObj.gameObject.SetActive(false);
+        }
     }
 
 }

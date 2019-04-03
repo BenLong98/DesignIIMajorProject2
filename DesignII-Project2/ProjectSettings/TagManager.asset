@@ -15,6 +15,7 @@ TagManager:
   - GameHandler
   - CanvasMain
   - EventSystemMain
+  - CustomCharacter
   layers:
   - Default
   - TransparentFX

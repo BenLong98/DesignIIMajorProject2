@@ -3857,6 +3857,7 @@ MonoBehaviour:
   weaponRenderer: {fileID: 0}
   player: {fileID: 1926955452359364}
   characterCustomizePanel: {fileID: 0}
+  gameHandler: {fileID: 0}
 --- !u!114 &114887394325637392
 MonoBehaviour:
   m_ObjectHideFlags: 1

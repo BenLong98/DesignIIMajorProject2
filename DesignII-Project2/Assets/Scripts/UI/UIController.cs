@@ -57,12 +57,19 @@ public class UIController : MonoBehaviour
 
     public void OnClickMainMenuButton()
     {
+        
+        gameHandler.GetComponent<GameHandler>().menuCounter += 1;
+        gameHandler.GetComponent<GameHandler>().isInMenu = true;
+        gameHandler.GetComponent<GameHandler>().CheckMenus();
         SceneController.instance.MainMenuSceneProgression();
     }
 
     public void OnClickPlayButton()
     {
         gameHandler.GetComponent<GameHandler>().isInMenu = false;
+        gameHandler.GetComponent<GameHandler>().menuCounter += 1;
+        gameHandler.GetComponent<GameHandler>().doneCreating = true;
+        gameHandler.GetComponent<GameHandler>().CheckMenus();
         SceneController.instance.CharacterSelectionSceneProgression();
     }
 
