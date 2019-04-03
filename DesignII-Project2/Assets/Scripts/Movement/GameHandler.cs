@@ -37,6 +37,9 @@ public class GameHandler : MonoBehaviour {
     [SerializeField] GameObject titleText;
     [SerializeField] GameObject uiController;
 
+    [SerializeField] GameObject creditsPanel;
+    [SerializeField] GameObject helpPanel;
+
     public bool isInMenu = true;
     public bool doneCreating = false;
 
@@ -49,7 +52,9 @@ public class GameHandler : MonoBehaviour {
         customizePanel = GameObject.FindGameObjectWithTag("CustomCharacter");
         gearMain = GameObject.FindGameObjectWithTag("GearMain");
         titleText = GameObject.FindGameObjectWithTag("TitleText");
-        
+
+
+
     }
 
     /// <summary>
@@ -120,6 +125,9 @@ public class GameHandler : MonoBehaviour {
 
     }
 
+
+
+
     private void OpenPlayDialog() {
         if (level == currentTarget.GetComponent<WayPoint>().GetLevel() - 1)
         {
@@ -165,6 +173,31 @@ public class GameHandler : MonoBehaviour {
             customizePanel.GetComponent<Image>().enabled = false;
             childObj.gameObject.SetActive(false);
         }
+    }
+
+    //Button Handlers
+
+
+    public void DisplayCredits()
+    {
+        isInMenu = false;
+        creditsPanel.SetActive(true);
+    }
+    public void HideCredits()
+    {
+        isInMenu = true;
+        creditsPanel.SetActive(false);
+    }
+
+    public void DisplayHelp()
+    {
+        isInMenu = false;
+        helpPanel.SetActive(true);
+    }
+    public void HideHelp()
+    {
+        isInMenu = true;
+        helpPanel.SetActive(false);
     }
 
 }

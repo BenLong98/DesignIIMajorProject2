@@ -18,6 +18,8 @@ TagManager:
   - CustomCharacter
   - GearMain
   - TitleText
+  - Credits
+  - Help
   layers:
   - Default
   - TransparentFX

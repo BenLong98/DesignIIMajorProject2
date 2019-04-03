@@ -30,7 +30,7 @@ public class SceneController : MonoBehaviour
 
     public void CreditsSceneProgression()
     {
-        SceneManager.LoadScene("CreditsScene");
+        SceneManager.LoadScene("CreditScreen");
     }
 
     public void MainMenuSceneProgression()
