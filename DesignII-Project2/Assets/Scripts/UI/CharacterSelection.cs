@@ -105,17 +105,19 @@ public class CharacterSelection : MonoBehaviour
             }
         }
 
-        for (int x = 0; x < highlightIsActive.Length; x++)
+        if (SceneController.instance.publicCurrentScene == "CharacterSelectionScene")
         {
-            if (highlightIsActive[x] == true)
+            for (int x = 0; x < highlightIsActive.Length; x++)
             {
-                spotPanels[x].SetActive(true);
-            }
-            else
-            {
-                spotPanels[x].SetActive(false);
+                if (highlightIsActive[x] == true)
+                {
+                    spotPanels[x].SetActive(true);
+                }
+                else
+                {
+                    spotPanels[x].SetActive(false);
+                }
             }
         }
-
     }
 }

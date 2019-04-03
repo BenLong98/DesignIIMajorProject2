@@ -10,6 +10,11 @@ public class SceneController : MonoBehaviour
     [SerializeField] string currentScene;
     [SerializeField] GameObject gameHandler;
 
+    public string publicCurrentScene
+    {
+        get { return currentScene; }
+    }
+
     private void Awake()
     {
         if (instance == null)
@@ -64,4 +69,9 @@ public class SceneController : MonoBehaviour
         SceneManager.LoadScene("Battle");
     }
 
+
+    private void Update()
+    {
+        currentScene = SceneManager.GetActiveScene().name;
+    }
 }

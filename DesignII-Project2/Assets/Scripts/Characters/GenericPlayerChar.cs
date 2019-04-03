@@ -92,6 +92,12 @@ public class GenericPlayerChar : MonoBehaviour
         _originalDefense = _defense;
     }
 
+    private void OnEnable()
+    {
+        _health = _maxHealth;
+        _originalDefense = _defense;
+    }
+
     private void Update()
     {
         if(_isEvading)
