@@ -498,7 +498,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &142793323
 RectTransform:
   m_ObjectHideFlags: 0
@@ -517,7 +517,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -6.5, y: -515.16}
+  m_AnchoredPosition: {x: -7.39, y: -515.05}
   m_SizeDelta: {x: 175.795, y: 150.54}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &142793324
@@ -2516,7 +2516,7 @@ GameObject:
   - component: {fileID: 812561644}
   - component: {fileID: 812561647}
   m_Layer: 0
-  m_Name: Canvas
+  m_Name: PlayerCanvas
   m_TagString: CanvasMain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2999,6 +2999,7 @@ MonoBehaviour:
   camContents: {fileID: 1746553965}
   gearMain: {fileID: 679660958}
   titleText: {fileID: 493790046}
+  uiController: {fileID: 464700288}
   isInMenu: 1
   doneCreating: 0
 --- !u!4 &1065323568
@@ -4203,6 +4204,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1926955452359364, guid: 5264774ecfef7184585650291d4ec522, type: 2}
+      propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 114781541827759578, guid: 5264774ecfef7184585650291d4ec522,
         type: 2}
       propertyPath: helmText
@@ -4233,10 +4238,6 @@ Prefab:
       propertyPath: characterCustomizePanel
       value: 
       objectReference: {fileID: 1377220228}
-    - target: {fileID: 1926955452359364, guid: 5264774ecfef7184585650291d4ec522, type: 2}
-      propertyPath: m_Name
-      value: Player
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5264774ecfef7184585650291d4ec522, type: 2}
   m_IsPrefabAsset: 0
@@ -4578,7 +4579,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 40
+    m_FontSize: 29
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -4589,7 +4590,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Play
+  m_Text: Coming Soon
 --- !u!222 &1622865105
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4625,6 +4626,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentScene: 
+  gameHandler: {fileID: 1065323566}
 --- !u!4 &1637148318
 Transform:
   m_ObjectHideFlags: 0
@@ -4791,7 +4793,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Play
+  m_Text: Coming Soon
 --- !u!222 &1719753435
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -8,7 +8,7 @@ public class SceneController : MonoBehaviour
     public static SceneController instance; //Singleton Pattern
 
     [SerializeField] string currentScene;
- 
+    [SerializeField] GameObject gameHandler;
 
     private void Awake()
     {
@@ -35,6 +35,17 @@ public class SceneController : MonoBehaviour
 
     public void MainMenuSceneProgression()
     {
+
+        SceneManager.LoadScene("MenuAfterCreation");
+    }
+
+    public void MainMenuSceneProgressionWin()
+    {
+        gameHandler.GetComponent<GameHandler>().level += 1;
+        gameHandler.GetComponent<GameHandler>().menuCounter += 1;
+        gameHandler.GetComponent<GameHandler>().CheckMenus();
+
+        gameHandler.GetComponent<GameHandler>().isInMenu = true;
         SceneManager.LoadScene("MenuAfterCreation");
     }
 
@@ -50,7 +61,7 @@ public class SceneController : MonoBehaviour
 
     public void CharacterSelectionSceneProgression()
     {
-        SceneManager.LoadScene("CharacterSelectionScene");
+        SceneManager.LoadScene("Battle");
     }
 
 }

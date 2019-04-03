@@ -155,7 +155,7 @@ public class BattleController : MonoBehaviour {
 
     private void BackToMenu()
     {
-        SceneController.instance.MainMenuSceneProgression();
+        SceneController.instance.MainMenuSceneProgressionWin();
         PlayerPartyController.instance.EndBattle();
     }
 }

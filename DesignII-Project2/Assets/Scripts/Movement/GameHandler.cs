@@ -10,7 +10,7 @@ public class GameHandler : MonoBehaviour {
     [SerializeField] float speed = 1f;
 
     //Current Level
-    [SerializeField] int level = 0;
+    public int level = 0;
 
     //Current State of Menu
     public int menuCounter = 0;
@@ -21,7 +21,7 @@ public class GameHandler : MonoBehaviour {
     [SerializeField] EventSystem m_EventSystem;
 
     //Player Reference
-    [SerializeField] GameObject player;
+    public GameObject player;
 
     //Lerping info
     private float startTime;
@@ -35,6 +35,7 @@ public class GameHandler : MonoBehaviour {
     [SerializeField] GameObject camContents;
     [SerializeField] GameObject gearMain;
     [SerializeField] GameObject titleText;
+    [SerializeField] GameObject uiController;
 
     public bool isInMenu = true;
     public bool doneCreating = false;
@@ -48,6 +49,7 @@ public class GameHandler : MonoBehaviour {
         customizePanel = GameObject.FindGameObjectWithTag("CustomCharacter");
         gearMain = GameObject.FindGameObjectWithTag("GearMain");
         titleText = GameObject.FindGameObjectWithTag("TitleText");
+        
     }
 
     /// <summary>
@@ -152,9 +154,11 @@ public class GameHandler : MonoBehaviour {
             camContents.SetActive(true);
             gearMain.SetActive(true);
             titleText.SetActive(true);
+            uiController.SetActive(true);
         }
         else
         {
+            uiController.SetActive(false);
             titleText.SetActive(false);
             camContents.SetActive(false);
             gearMain.SetActive(false);
