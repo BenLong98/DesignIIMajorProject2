@@ -331,7 +331,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.39215687}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1110,15 +1110,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   classNameText: {fileID: 1388007179}
   characterIcons:
-  - {fileID: 21300000, guid: 5cee304721324c74a8f58123dc0f34f4, type: 3}
-  - {fileID: 21300000, guid: 2fe6ca31a4436bf43bc20e126e518262, type: 3}
-  - {fileID: 21300000, guid: e72997bbb48c6dd4aace81459304a2ff, type: 3}
-  - {fileID: 21300000, guid: 68ed5727abaf3c748b8c7f935d843d6e, type: 3}
-  - {fileID: 21300000, guid: cf21a07d883c13c45abb80e5f4f2175a, type: 3}
-  - {fileID: 21300000, guid: afb335eadb1c9b249aa5ea2fba728108, type: 3}
-  - {fileID: 21300000, guid: cd12f4c4071e2b242a726668b589daed, type: 3}
-  - {fileID: 21300000, guid: abcc177794074b1439f2cfbbae1d432a, type: 3}
-  - {fileID: 21300000, guid: 6cf35e65e7670ea468851327da6788d9, type: 3}
+  - {fileID: 21300000, guid: f6da9a23b952a6840aab017f469f6540, type: 3}
+  - {fileID: 21300000, guid: 4cec9c6cd1ed8bd4d9591bea6bde3414, type: 3}
+  - {fileID: 21300000, guid: 36b794216e9a3a24f98416285c524b58, type: 3}
+  - {fileID: 21300000, guid: b1b70502a7003bf46b35676c4b8355dd, type: 3}
+  - {fileID: 21300000, guid: e14db747b4d7bde4fb454c86169d7825, type: 3}
+  - {fileID: 21300000, guid: eaa039110e29aae46bc233ab970e155e, type: 3}
+  - {fileID: 21300000, guid: e6b1dea0aa357f245a596326c449739b, type: 3}
+  - {fileID: 21300000, guid: 5360aba8efbe5aa488b09ded13cbd4b3, type: 3}
+  - {fileID: 21300000, guid: db84043e6d728054d98f9e1645bb5377, type: 3}
   - {fileID: 0}
 --- !u!1001 &1098341278
 Prefab:
