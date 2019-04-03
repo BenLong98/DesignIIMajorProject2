@@ -33,6 +33,8 @@ public class GameHandler : MonoBehaviour {
     [SerializeField] GameObject customizePanel;
     [SerializeField] Transform childObj;
     [SerializeField] GameObject camContents;
+    [SerializeField] GameObject gearMain;
+    [SerializeField] GameObject titleText;
 
     public bool isInMenu = true;
     public bool doneCreating = false;
@@ -44,6 +46,8 @@ public class GameHandler : MonoBehaviour {
     {
         DontDestroyOnLoad(this.gameObject);
         customizePanel = GameObject.FindGameObjectWithTag("CustomCharacter");
+        gearMain = GameObject.FindGameObjectWithTag("GearMain");
+        titleText = GameObject.FindGameObjectWithTag("TitleText");
     }
 
     /// <summary>
@@ -146,10 +150,14 @@ public class GameHandler : MonoBehaviour {
             }
             
             camContents.SetActive(true);
+            gearMain.SetActive(true);
+            titleText.SetActive(true);
         }
         else
         {
+            titleText.SetActive(false);
             camContents.SetActive(false);
+            gearMain.SetActive(false);
             customizePanel.GetComponent<Image>().enabled = false;
             childObj.gameObject.SetActive(false);
         }

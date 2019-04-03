@@ -16,6 +16,8 @@ TagManager:
   - CanvasMain
   - EventSystemMain
   - CustomCharacter
+  - GearMain
+  - TitleText
   layers:
   - Default
   - TransparentFX
