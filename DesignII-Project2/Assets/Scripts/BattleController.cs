@@ -47,6 +47,8 @@ public class BattleController : MonoBehaviour {
 
     public void NextTurn()
     {
+        CheckIfBattleEnded();
+
         _currentChar = _allUnits[0];
         _allUnits.Remove(_currentChar);
 
@@ -57,15 +59,33 @@ public class BattleController : MonoBehaviour {
             if(_currentChar.tag == "Player")
             {
                 Debug.Log("Player turn: " + _currentChar.classType);
+
+                //Upkeep for classes with lasting buffs.
+                if (currentChar.classType == GenericPlayerChar.CharClass.Barbarian)
+                {
+                    currentChar.isAggro = false;
+                }
+                if (currentChar.classType == GenericPlayerChar.CharClass.Knight)
+                {
+                    foreach(GenericPlayerChar chara in _allUnits)
+                    {
+                        chara.isShielded = false;
+                    }
+                }
+                if(currentChar.classType == GenericPlayerChar.CharClass.Rogue)
+                {
+                    currentChar.isEvading = false;
+                }
+
                 GameObject.Find("UIController").GetComponent<UIController>().SwitchAttackButtonVisibility(true, true);
                 GameObject.Find("UIController").GetComponent<UIController>().ChangeAttackButtonText();
                 CharacterInfoAndIconUIElement.iconName = currentChar.classType.ToString();
                 GameObject.Find("UIController").GetComponent<UIController>().SwitchAttackButtonVisibility(false, false);
 
-                if(BattleController.instance.currentChar.classType == GenericPlayerChar.CharClass.Barbarian
-                || BattleController.instance.currentChar.classType == GenericPlayerChar.CharClass.Cleric
-                || BattleController.instance.currentChar.classType == GenericPlayerChar.CharClass.Rogue
-                || BattleController.instance.currentChar.classType == GenericPlayerChar.CharClass.Wizard)
+                if(currentChar.classType == GenericPlayerChar.CharClass.Barbarian
+                || currentChar.classType == GenericPlayerChar.CharClass.Cleric
+                || currentChar.classType == GenericPlayerChar.CharClass.Rogue
+                || currentChar.classType == GenericPlayerChar.CharClass.Wizard)
                 {
                     GameObject.Find("UIController").GetComponent<UIController>().SwitchAttackButtonVisibility(false, true);
                 }
@@ -77,7 +97,20 @@ public class BattleController : MonoBehaviour {
                 if (chanceToMiss < currentChar.accuracy)
                 {
                     GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
-                    int target = Random.Range(0, players.Length - 1);
+                    int target = -1;
+                    //Scans for aggroed players and targets them. If no aggroed players, just target a random one.
+                    for(int i = 0; i < 3; i++)
+                    {
+                        if(players[i].GetComponent<GenericPlayerChar>().isAggro)
+                        {
+                            target = i;
+                        }
+                    }
+                    if (target == -1)
+                    {
+                        target = Random.Range(0, players.Length - 1);
+                    }
+
                     int damage = (int)Mathf.Round(currentChar.attack * (1 - ((float)players[target].GetComponent<GenericPlayerChar>().defense / 100)));
                     players[target].GetComponent<GenericPlayerChar>().Hurt(damage);
                 }
@@ -88,5 +121,41 @@ public class BattleController : MonoBehaviour {
         {
             NextTurn();
         }
+    }
+
+    private void CheckIfBattleEnded()
+    {
+        GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+
+        bool playersAlive = false;
+        bool enemiesAlive = false;
+
+        foreach(GameObject player in players)
+        {
+            if(player.GetComponent<GenericPlayerChar>().health > 0)
+            {
+                playersAlive = true;
+            }
+        }
+
+        foreach (GameObject enemy in enemies)
+        {
+            if (enemy.GetComponent<GenericPlayerChar>().health > 0)
+            {
+                enemiesAlive = true;
+            }
+        }
+
+        if(!playersAlive || !enemiesAlive)
+        {
+            Invoke("BackToMenu", 2);
+        }
+    }
+
+    private void BackToMenu()
+    {
+        SceneController.instance.MainMenuSceneProgression();
+        PlayerPartyController.instance.EndBattle();
     }
 }

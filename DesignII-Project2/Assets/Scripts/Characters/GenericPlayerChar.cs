@@ -18,6 +18,7 @@ public class GenericPlayerChar : MonoBehaviour
 
     private bool _isShielded;
     private bool _isEvading;
+    private bool _isAggro;
 
     public enum CharClass
     {
@@ -67,9 +68,44 @@ public class GenericPlayerChar : MonoBehaviour
         get { return _maxHealth; }
     }
 
+    public bool isShielded
+    {
+        get { return _isShielded; }
+        set { _isShielded = value; }
+    }
+
+    public bool isEvading
+    {
+        get { return _isEvading; }
+        set { _isEvading = value; }
+    }
+
+    public bool isAggro
+    {
+        get { return _isAggro; }
+        set { _isAggro = value; }
+    }
+
     private void Start()
     {
         _health = _maxHealth;
+        _originalDefense = _defense;
+    }
+
+    private void Update()
+    {
+        if(_isEvading)
+        {
+            _defense = 100;
+        }
+        else if(_isShielded)
+        {
+            _defense = 90;
+        }
+        else
+        {
+            _defense = _originalDefense;
+        }
     }
 
     public void Hurt(int howHurt)

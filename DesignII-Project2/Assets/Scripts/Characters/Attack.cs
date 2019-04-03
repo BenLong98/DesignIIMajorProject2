@@ -76,7 +76,7 @@ public class Attack : MonoBehaviour
     {
         if (BattleController.instance.currentChar.classType == GenericPlayerChar.CharClass.Barbarian)
         {
-            
+            BattleController.instance.currentChar.isAggro = true;
         }
         else if (BattleController.instance.currentChar.classType == GenericPlayerChar.CharClass.Cleric)
         {
@@ -89,7 +89,7 @@ public class Attack : MonoBehaviour
         }
         else if (BattleController.instance.currentChar.classType == GenericPlayerChar.CharClass.Knight)
         {
-            
+            _target.GetComponent<GenericPlayerChar>().isShielded = true;
         }
         else if (BattleController.instance.currentChar.classType == GenericPlayerChar.CharClass.Ranger)
         {
@@ -101,7 +101,7 @@ public class Attack : MonoBehaviour
         }
         else if (BattleController.instance.currentChar.classType == GenericPlayerChar.CharClass.Rogue)
         {
-            
+            BattleController.instance.currentChar.isEvading = true;
         }
         else if (BattleController.instance.currentChar.classType == GenericPlayerChar.CharClass.Wizard)
         {
@@ -113,6 +113,8 @@ public class Attack : MonoBehaviour
                 stats.Hurt(damage);
             }
         }
+
+        BattleController.instance.NextTurn();
     }
 
     private void AdjustButtonsForTarget()
