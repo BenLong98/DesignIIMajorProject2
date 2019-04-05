@@ -38,15 +38,24 @@ public class SceneController : MonoBehaviour
         SceneManager.LoadScene("CreditScreen");
     }
 
-    public void MainMenuSceneProgression()
-    {
-
-        SceneManager.LoadScene("MenuAfterCreation");
-    }
+   // public void MainMenuSceneProgression()
+  //  {
+//
+       // SceneManager.LoadScene("MenuAfterCreation");
+ //   }
 
     public void MainMenuSceneProgressionWin()
     {
         gameHandler.GetComponent<GameHandler>().level += 1;
+        gameHandler.GetComponent<GameHandler>().menuCounter += 1;
+        gameHandler.GetComponent<GameHandler>().CheckMenus();
+
+        gameHandler.GetComponent<GameHandler>().isInMenu = true;
+        SceneManager.LoadScene("MenuAfterCreation");
+    }
+
+    public void MainMenuSceneProgression()
+    {
         gameHandler.GetComponent<GameHandler>().menuCounter += 1;
         gameHandler.GetComponent<GameHandler>().CheckMenus();
 
@@ -66,7 +75,7 @@ public class SceneController : MonoBehaviour
 
     public void CharacterSelectionSceneProgression()
     {
-        SceneManager.LoadScene("Battle");
+        SceneManager.LoadScene("CharacterSelectionScene");
     }
 
 
