@@ -11,6 +11,7 @@ public class GenericPlayerChar : MonoBehaviour
     [SerializeField] private int _defense;
     [SerializeField] private int _initiative;
     [SerializeField] private int _accuracy;
+    [SerializeField] private int _cooldown;
 
     [SerializeField] private CharClass _classType;
 
@@ -68,6 +69,11 @@ public class GenericPlayerChar : MonoBehaviour
         get { return _maxHealth; }
     }
 
+    public int cooldown
+    {
+        get { return _cooldown; }
+    }
+
     public bool isShielded
     {
         get { return _isShielded; }
@@ -84,6 +90,11 @@ public class GenericPlayerChar : MonoBehaviour
     {
         get { return _isAggro; }
         set { _isAggro = value; }
+    }
+
+    public bool specialIsReady
+    {
+        get { return _cooldown == 0; }
     }
 
     private void Start()
@@ -129,5 +140,15 @@ public class GenericPlayerChar : MonoBehaviour
         {
             _health = _maxHealth;
         }
+    }
+
+    public void SetCooldown(int attackCooldown)
+    {
+        _cooldown = attackCooldown;
+    }
+
+    public void UpkeepCooldown()
+    {
+        _cooldown--;
     }
 }

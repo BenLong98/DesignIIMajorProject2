@@ -72,8 +72,8 @@ public class UIController : MonoBehaviour
 
     public void SwitchAttackButtonVisibility(bool isActive, bool isActive2)
     {
-        attack1Button.gameObject.SetActive(isActive);
-        attack2Button.gameObject.SetActive(isActive2);
+        attack1Button.interactable = isActive;
+        attack2Button.interactable = isActive2;
     }
 
     public void ChangeAttackButtonText()
