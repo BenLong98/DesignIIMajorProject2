@@ -20,6 +20,8 @@ public class BattleController : MonoBehaviour
         get { return _currentChar; }
     }
 
+    private Vector3 currentCharPos = new Vector3(0,0,0);
+
     // Use this for initialization
     void Start()
     {
@@ -131,29 +133,7 @@ public class BattleController : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("Enemy turn");
-                    int chanceToMiss = Random.Range(0, 101);
-                    if (chanceToMiss < currentChar.accuracy)
-                    {
-                        GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
-                        int target = -1;
-                        //Scans for aggroed players and targets them. If no aggroed players, just target a random one.
-                        for (int i = 0; i < 3; i++)
-                        {
-                            if (players[i].GetComponent<GenericPlayerChar>().isAggro)
-                            {
-                                target = i;
-                            }
-                        }
-                        if (target == -1)
-                        {
-                            target = Random.Range(0, players.Length - 1);
-                        }
-
-                        int damage = (int)Mathf.Round(currentChar.attack * (1 - ((float)players[target].GetComponent<GenericPlayerChar>().defense / 100)));
-                        players[target].GetComponent<GenericPlayerChar>().Hurt(damage);
-                    }
-                    NextTurn();
+                    StartCoroutine("EnemyAttack");
                 }
             }
             else
@@ -161,6 +141,84 @@ public class BattleController : MonoBehaviour
                 NextTurn();
             }
         }
+    }
+
+    public void SetPos(GameObject Entity) {
+        currentCharPos = Entity.transform.position;
+    }
+
+    public Vector3 GetPos()
+    {
+        return currentCharPos;
+    }
+
+    IEnumerator EnemyAttack() {
+        Debug.Log("Enemy turn");
+        int chanceToMiss = Random.Range(0, 101);
+        if (chanceToMiss < currentChar.accuracy)
+        {
+            GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+            int target = -1;
+            //Scans for aggroed players and targets them. If no aggroed players, just target a random one.
+            for (int i = 0; i < 3; i++)
+            {
+                if (players[i].GetComponent<GenericPlayerChar>().isAggro)
+                {
+                    target = i;
+                }
+            }
+            if (target == -1)
+            {
+                target = Random.Range(0, players.Length - 1);
+            }
+
+            SetPos(currentChar.gameObject);
+
+            //LERP MOVEMENT
+            if (currentChar.gameObject.tag == "Enemy")
+            {
+                yield return new WaitForSeconds(3f);
+                float startTime = Time.time;
+                while (Time.time - startTime <= 2)
+                {
+                    currentChar.gameObject.transform.position = Vector3.Lerp(currentChar.gameObject.transform.position, players[target].gameObject.transform.position, (Time.time - startTime) * 0.1f);
+                    //Animation PLAY HERE
+                    //SOUND PLAY HERE
+                    yield return 1;
+                }
+                yield return new WaitForSeconds(0.25f);
+
+            }
+
+            yield return new WaitForSeconds(1f);
+
+            //Set Damage
+            int damage = (int)Mathf.Round(currentChar.attack * (1 - ((float)players[target].GetComponent<GenericPlayerChar>().defense / 100)));
+            players[target].GetComponent<GenericPlayerChar>().Hurt(damage);
+
+            if (currentChar.gameObject.tag == "Enemy")
+            {
+                yield return new WaitForSeconds(1f);
+                float startTime = Time.time;
+                while (Time.time - startTime <= 2)
+                {
+                    currentChar.gameObject.transform.position = Vector3.Lerp(currentChar.gameObject.transform.position, GetPos(), (Time.time - startTime) * 0.1f);
+                    //Animation PLAY HERE
+                    //SOUND PLAY HERE
+                    yield return 1;
+                }
+                yield return new WaitForSeconds(0.25f);
+
+            }
+
+
+        }
+
+        yield return new WaitForSeconds(2f);
+
+        NextTurn();
+
+
     }
 
     private bool CheckIfBattleEnded()
