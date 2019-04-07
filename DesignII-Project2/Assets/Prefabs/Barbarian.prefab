@@ -3726,7 +3726,7 @@ MonoBehaviour:
   _defense: 50
   _initiative: 70
   _accuracy: 75
-  _cooldown: 0
+  _cooldown: 2
   _classType: 0
 --- !u!114 &114807552981062382
 MonoBehaviour:

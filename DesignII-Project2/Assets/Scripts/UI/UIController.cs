@@ -73,7 +73,14 @@ public class UIController : MonoBehaviour
     public void SwitchAttackButtonVisibility(bool isActive, bool isActive2)
     {
         attack1Button.interactable = isActive;
-        attack2Button.interactable = isActive2;
+        if(BattleController.instance.currentChar != null && BattleController.instance.currentChar.specialIsReady)
+        {
+            attack2Button.interactable = isActive2;
+        }
+        else
+        {
+            attack2Button.interactable = false;
+        }
     }
 
     public void ChangeAttackButtonText()
@@ -113,6 +120,11 @@ public class UIController : MonoBehaviour
         {
             attack1Button.GetComponentInChildren<Text>().text = "Lightning Bolt";
             attack2Button.GetComponentInChildren<Text>().text = "Fireball";
+        }
+
+        if(!BattleController.instance.currentChar.specialIsReady)
+        {
+            attack2Button.GetComponentInChildren<Text>().text += ": " + BattleController.instance.currentChar.cooldown;
         }
     }
 }

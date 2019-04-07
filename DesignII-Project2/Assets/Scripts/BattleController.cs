@@ -42,8 +42,7 @@ public class BattleController : MonoBehaviour
         int spotNumber = 0;
 
         foreach (string className in classNames)
-        {
-            
+        {        
             for (int x = 0; x < playerPartyObjects.Length; x++)
             {
                 if (playerPartyObjects[x].classType.ToString() == className)
@@ -55,9 +54,6 @@ public class BattleController : MonoBehaviour
                 }
             }
         }
-
-
-
 
         GameObject.Find("UIController").GetComponent<UIController>().SwitchAttackButtonVisibility(false, false);
 
@@ -89,7 +85,6 @@ public class BattleController : MonoBehaviour
     {
         if (!CheckIfBattleEnded())
         {
-
             _currentChar = _allUnits[0];
             _allUnits.Remove(_currentChar);
 
@@ -99,6 +94,7 @@ public class BattleController : MonoBehaviour
 
                 if (_currentChar.tag == "Player")
                 {
+                    currentChar.UpkeepCooldown();
                     Debug.Log("Player turn: " + _currentChar.classType);
 
                     //Upkeep for classes with lasting buffs.
@@ -208,17 +204,11 @@ public class BattleController : MonoBehaviour
                     yield return 1;
                 }
                 yield return new WaitForSeconds(0.25f);
-
             }
-
-
         }
 
         yield return new WaitForSeconds(2f);
-
         NextTurn();
-
-
     }
 
     private bool CheckIfBattleEnded()

@@ -114,6 +114,7 @@ public class Attack : MonoBehaviour
             }
         }
 
+        BattleController.instance.currentChar.SetCooldown();
         BattleController.instance.NextTurn();
     }
 
