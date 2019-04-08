@@ -35,13 +35,15 @@ public class GameHandler : MonoBehaviour {
     [SerializeField] GameObject camContents;
     [SerializeField] GameObject gearMain;
     [SerializeField] GameObject titleText;
-    [SerializeField] GameObject uiController;
+    public GameObject uiController;
 
     [SerializeField] GameObject creditsPanel;
     [SerializeField] GameObject helpPanel;
 
     public bool isInMenu = true;
     public bool doneCreating = false;
+
+    private Vector3 _originalPosition;
 
     /// <summary>
     /// Don't destroy when loading scenes
@@ -200,4 +202,16 @@ public class GameHandler : MonoBehaviour {
         helpPanel.SetActive(false);
     }
 
+    public void MoveToFrame()
+    {
+        _originalPosition = player.transform.position;
+        player.transform.position = new Vector3(-12.2f, 6.4f, 0);
+        player.transform.localScale = new Vector3(1, 1, 1);
+    }
+
+    public void MoveToOriginalPosition()
+    {
+        player.transform.position = _originalPosition;
+        player.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+    }
 }

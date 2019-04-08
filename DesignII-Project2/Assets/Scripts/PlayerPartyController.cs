@@ -6,6 +6,7 @@ public class PlayerPartyController : MonoBehaviour
 {
 
     public static PlayerPartyController instance;
+    //public GameObject playerCanvas;
     public List<GenericPlayerChar> playerCharacterList;
     public List<GenericPlayerChar> enemyCharacterList;
     public List<GenericPlayerChar> playerParty;
@@ -40,6 +41,8 @@ public class PlayerPartyController : MonoBehaviour
         CharacterSelection.highlightIsActive[0] = true;
         CharacterSelection.highlightIsActive[1] = true;
         CharacterSelection.highlightIsActive[2] = true;
+        Debug.Log(CharacterSelection.highlightIsActive[0]);
+        //Debug.Log(SceneController.instance.publicCurrentScene);
 
         slotNumber = 0;
     }

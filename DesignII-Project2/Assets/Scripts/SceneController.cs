@@ -5,7 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class SceneController : MonoBehaviour
 {
-    public static SceneController instance; //Singleton Pattern
+    //public static SceneController instance; //Singleton Pattern
+
+    public static string battleSceneName;
 
     [SerializeField] string currentScene;
     [SerializeField] GameObject gameHandler;
@@ -17,15 +19,6 @@ public class SceneController : MonoBehaviour
 
     private void Awake()
     {
-        if (instance == null)
-        {
-            instance = this;
-        }
-        else if (instance != this)
-        {
-            Destroy(gameObject);
-        }
-        DontDestroyOnLoad(gameObject);
     }
 
     void Start()
@@ -49,6 +42,10 @@ public class SceneController : MonoBehaviour
         gameHandler.GetComponent<GameHandler>().level += 1;
         gameHandler.GetComponent<GameHandler>().menuCounter += 1;
         gameHandler.GetComponent<GameHandler>().CheckMenus();
+        //gameHandler.GetComponent<GameHandler>().uiController.SetActive(true);
+        //gameHandler.GetComponent<GameHandler>().gearMain.SetActive(true);
+        //gameHandler.GetComponent<GameHandler>().uiController.SetActive(true);
+        //gameHandler.GetComponent<GameHandler>().uiController.SetActive(true);
 
         gameHandler.GetComponent<GameHandler>().isInMenu = true;
         SceneManager.LoadScene("MenuAfterCreation");
@@ -70,11 +67,16 @@ public class SceneController : MonoBehaviour
 
     public void BattleSceneProgression()
     {
-        SceneManager.LoadScene("Battle");
+        //gameHandler.GetComponent<GameHandler>().uiController.SetActive(false);
+        SceneManager.LoadScene(battleSceneName);
+
     }
 
     public void CharacterSelectionSceneProgression()
     {
+        gameHandler.GetComponent<GameHandler>().uiController.SetActive(false);
+        //PlayerCanvasController.instance.playerCanvas.SetActive(false);
+        //PlayerPartyController.instance.playerCanvas.SetActive(false);
         SceneManager.LoadScene("CharacterSelectionScene");
     }
 

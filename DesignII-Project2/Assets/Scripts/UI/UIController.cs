@@ -21,6 +21,7 @@ public class UIController : MonoBehaviour
     public Button mainMenuButton;
     public GameObject gearPanel;
 
+    [SerializeField] GameObject sceneController;
     [SerializeField] GameObject gameHandler;
 
     void Start ()
@@ -47,27 +48,46 @@ public class UIController : MonoBehaviour
 
     public void OnClickCreditsButton()
     {
-        SceneController.instance.CreditsSceneProgression();
+        sceneController.GetComponent<SceneController>().CreditsSceneProgression();
     }
 
     public void OnClickStartBattleButton()
     {
-        SceneController.instance.BattleSceneProgression();
+        sceneController.GetComponent<SceneController>().BattleSceneProgression();
+    }
+
+    public void OnClickPlayLevelButton()
+    {
+        SceneController.battleSceneName = "Battle";
+        sceneController.GetComponent<SceneController>().CharacterSelectionSceneProgression();
+    }
+
+    public void OnClickPlayLevelButton2()
+    {
+        SceneController.battleSceneName = "Battle2";
+        sceneController.GetComponent<SceneController>().CharacterSelectionSceneProgression();
+    }
+
+    public void OnClickPlayLevelButton3()
+    {
+        SceneController.battleSceneName = "Battle3";
+        sceneController.GetComponent<SceneController>().CharacterSelectionSceneProgression();
     }
 
     public void OnClickMainMenuButton()
-    {
-
-        SceneController.instance.MainMenuSceneProgression();
+    {      
+        sceneController.GetComponent<SceneController>().MainMenuSceneProgression();
+        gameHandler.GetComponent<GameHandler>().MoveToOriginalPosition();
     }
 
     public void OnClickPlayButton()
     {
         gameHandler.GetComponent<GameHandler>().isInMenu = false;
         gameHandler.GetComponent<GameHandler>().menuCounter += 1;
-        gameHandler.GetComponent<GameHandler>().doneCreating = true;
+        gameHandler.GetComponent<GameHandler>().doneCreating = true;       
         gameHandler.GetComponent<GameHandler>().CheckMenus();
-        SceneController.instance.CharacterSelectionSceneProgression();
+        sceneController.GetComponent<SceneController>().CharacterSelectionSceneProgression();
+        gameHandler.GetComponent<GameHandler>().MoveToFrame();
     }
 
     public void SwitchAttackButtonVisibility(bool isActive, bool isActive2)
@@ -90,7 +110,7 @@ public class UIController : MonoBehaviour
             attack1Button.GetComponentInChildren<Text>().text = "Smash";
             attack1Button.GetComponent<Image>().sprite = buttonSprites[0];
             attack2Button.GetComponentInChildren<Text>().text = "Aggro";
-            attack2Button.GetComponent<Image>().sprite = buttonSprites[5];
+            attack2Button.GetComponent<Image>().sprite = buttonSprites[9];
         }
         else if (BattleController.instance.currentChar.classType == GenericPlayerChar.CharClass.Cleric)
         {
@@ -109,17 +129,23 @@ public class UIController : MonoBehaviour
         else if (BattleController.instance.currentChar.classType == GenericPlayerChar.CharClass.Ranger)
         {
             attack1Button.GetComponentInChildren<Text>().text = "Arrow";
+            attack1Button.GetComponent<Image>().sprite = buttonSprites[6];
             attack2Button.GetComponentInChildren<Text>().text = "Snipe";
+            attack2Button.GetComponent<Image>().sprite = buttonSprites[7];
         }
         else if (BattleController.instance.currentChar.classType == GenericPlayerChar.CharClass.Rogue)
         {
             attack1Button.GetComponentInChildren<Text>().text = "Stab";
+            attack1Button.GetComponent<Image>().sprite = buttonSprites[0];
             attack2Button.GetComponentInChildren<Text>().text = "Evasion";
+            attack2Button.GetComponent<Image>().sprite = buttonSprites[8];
         }
         else if (BattleController.instance.currentChar.classType == GenericPlayerChar.CharClass.Wizard)
         {
             attack1Button.GetComponentInChildren<Text>().text = "Lightning Bolt";
+            attack1Button.GetComponent<Image>().sprite = buttonSprites[10];
             attack2Button.GetComponentInChildren<Text>().text = "Fireball";
+            attack2Button.GetComponent<Image>().sprite = buttonSprites[1];
         }
 
         if(!BattleController.instance.currentChar.specialIsReady)

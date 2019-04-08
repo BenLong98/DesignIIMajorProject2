@@ -14,6 +14,8 @@ public class BattleController : MonoBehaviour
     private List<GenericPlayerChar> _allUnits = new List<GenericPlayerChar>();
     [SerializeField] List<string> classNames;
     private GenericPlayerChar _currentChar;
+    [SerializeField] GameObject sceneController;
+    [SerializeField] private Text _turnPromptText;
 
     public GenericPlayerChar currentChar
     {
@@ -92,10 +94,12 @@ public class BattleController : MonoBehaviour
             {
                 _allUnits.Add(_currentChar);
 
+                _turnPromptText.text = _currentChar.classType + "'s Turn";
+
                 if (_currentChar.tag == "Player")
                 {
                     currentChar.UpkeepCooldown();
-                    Debug.Log("Player turn: " + _currentChar.classType);
+                    
 
                     //Upkeep for classes with lasting buffs.
                     if (currentChar.classType == GenericPlayerChar.CharClass.Barbarian)
@@ -129,11 +133,13 @@ public class BattleController : MonoBehaviour
                 }
                 else
                 {
+                    GameObject.Find("UIController").GetComponent<UIController>().SwitchAttackButtonVisibility(false, false);
                     StartCoroutine("EnemyAttack");
                 }
             }
             else
             {
+                GameObject.Find("UIController").GetComponent<UIController>().SwitchAttackButtonVisibility(false, false);
                 NextTurn();
             }
         }
@@ -245,7 +251,7 @@ public class BattleController : MonoBehaviour
 
     private void BackToMenu()
     {
-        SceneController.instance.MainMenuSceneProgressionWin();
+        sceneController.GetComponent<SceneController>().MainMenuSceneProgressionWin();
         PlayerPartyController.instance.EndBattle();
     }
 }

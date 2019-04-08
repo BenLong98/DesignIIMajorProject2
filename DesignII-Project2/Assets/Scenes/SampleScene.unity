@@ -206,8 +206,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24b48f9720cab0744b4fe77d74d6736f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startBattleButton: {fileID: 0}
+  attack1Button: {fileID: 0}
+  attack2Button: {fileID: 0}
+  resultsText: {fileID: 0}
+  buttonSprites: []
+  quitButton: {fileID: 0}
   gearButton: {fileID: 0}
+  mainMenuButton: {fileID: 0}
   gearPanel: {fileID: 0}
+  sceneController: {fileID: 0}
+  gameHandler: {fileID: 0}
 --- !u!4 &464700290
 Transform:
   m_ObjectHideFlags: 0

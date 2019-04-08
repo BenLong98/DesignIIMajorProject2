@@ -9,6 +9,8 @@ public class CharacterSelection : MonoBehaviour
     [Header("HighlightPanels")]
     public GameObject[] spotPanels = new GameObject[6];
 
+    public GameObject sceneController;
+
     public static bool[] highlightIsActive = new bool[6];
 
     public bool isActive;
@@ -17,6 +19,9 @@ public class CharacterSelection : MonoBehaviour
     [SerializeField] GraphicRaycaster m_Raycaster;
     PointerEventData m_PointerEventData;
     [SerializeField] EventSystem m_EventSystem;
+
+    [SerializeField] private AudioClip[] _sound;
+    [SerializeField] private AudioSource _soundSource;
 
     private void Start()
     {
@@ -80,32 +85,44 @@ public class CharacterSelection : MonoBehaviour
                 if (result.gameObject.transform.tag == "Spot1")
                 {
                     OnClick(spotPanels[0], 0, highlightIsActive[0]);
+                    _soundSource.clip = _sound[0];
+                    _soundSource.Play();
                 }
                 if (result.gameObject.transform.tag == "Spot2")
                 {
                     OnClick(spotPanels[1], 1, highlightIsActive[1]);
+                    _soundSource.clip = _sound[1];
+                    _soundSource.Play();
                 }
                 if (result.gameObject.transform.tag == "Spot3")
                 {
                     OnClick(spotPanels[2], 2, highlightIsActive[2]);
+                    _soundSource.clip = _sound[2];
+                    _soundSource.Play();
                 }
                 if (result.gameObject.transform.tag == "Spot4")
                 {
                     OnClick(spotPanels[3], 3, highlightIsActive[3]);
+                    _soundSource.clip = _sound[3];
+                    _soundSource.Play();
                 }
                 if (result.gameObject.transform.tag == "Spot5")
                 {
                     OnClick(spotPanels[4], 4, highlightIsActive[4]);
+                    _soundSource.clip = _sound[4];
+                    _soundSource.Play();
                 }
                 if (result.gameObject.transform.tag == "Spot6")
                 {
                     OnClick(spotPanels[5], 5, highlightIsActive[5]);
+                    _soundSource.clip = _sound[5];
+                    _soundSource.Play();
                 }
 
             }
         }
 
-        if (SceneController.instance.publicCurrentScene == "CharacterSelectionScene")
+        if (sceneController.GetComponent<SceneController>().publicCurrentScene == "CharacterSelectionScene")
         {
             for (int x = 0; x < highlightIsActive.Length; x++)
             {

@@ -35,7 +35,7 @@ public class HighlightCharacter : MonoBehaviour
 
     void Start ()
     {
-        offset.Set(0, 1, 0);
+        offset.Set(0, 0.5f, 0);
         highlightImage = Instantiate(imagePrefab);
         highlightImage.transform.parent = GameObject.Find("Canvas").transform;
         highlightImage.gameObject.transform.position = this.gameObject.transform.position + offset;
