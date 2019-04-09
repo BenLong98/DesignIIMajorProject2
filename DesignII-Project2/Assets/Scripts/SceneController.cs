@@ -17,13 +17,12 @@ public class SceneController : MonoBehaviour
         get { return currentScene; }
     }
 
-    private void Awake()
-    {
-    }
-
     void Start()
     {
-
+        if(gameHandler == null)
+        {
+            gameHandler = GameObject.Find("GameHandler");
+        }
     }
 
     public void CreditsSceneProgression()

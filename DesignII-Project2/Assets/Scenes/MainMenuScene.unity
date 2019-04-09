@@ -1570,9 +1570,19 @@ MonoBehaviour:
   startBattleButton: {fileID: 0}
   attack1Button: {fileID: 0}
   attack2Button: {fileID: 0}
-  resultsText: {fileID: 0}
-  buttonSprites: []
-  quitButton: {fileID: 0}
+  buttonSprites:
+  - {fileID: 21300000, guid: 5a875cef90f7be44abf10227cd1b583c, type: 3}
+  - {fileID: 21300000, guid: 942c94c2cb3d573478d227c8d54bab33, type: 3}
+  - {fileID: 21300000, guid: 7af230a80bb1e9947b775ca50593c534, type: 3}
+  - {fileID: 21300000, guid: d3d8454e16a2622408ae566a204d0af6, type: 3}
+  - {fileID: 21300000, guid: 8a5e1f96dc0101b4ca2b6040dc7559c9, type: 3}
+  - {fileID: 21300000, guid: 3f24eb386eb05eb49a63ffd33cb6b5f8, type: 3}
+  - {fileID: 21300000, guid: 99a82e9299309a3478f355ce96e54a49, type: 3}
+  - {fileID: 21300000, guid: 27153d23a66fc4a44b433cc85161494d, type: 3}
+  - {fileID: 21300000, guid: b64c5fce17a0c2242a32d436244c90fa, type: 3}
+  - {fileID: 21300000, guid: 1e4375ebcc8626347b7358f563bee913, type: 3}
+  - {fileID: 21300000, guid: 8a5e1f96dc0101b4ca2b6040dc7559c9, type: 3}
+  quitButton: {fileID: 531410579}
   gearButton: {fileID: 679660959}
   mainMenuButton: {fileID: 0}
   gearPanel: {fileID: 142793322}
@@ -2739,7 +2749,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 1
   Mute: 0

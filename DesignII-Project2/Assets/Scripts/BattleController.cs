@@ -70,6 +70,11 @@ public class BattleController : MonoBehaviour
             _allUnits.Add(unit.GetComponent<GenericPlayerChar>());
         }
 
+        if(_turnPromptText == null)
+        {
+            _turnPromptText = GameObject.Find("turnText").GetComponent<Text>();
+        }
+
         SortByInitiative();
 
         NextTurn();
@@ -251,6 +256,10 @@ public class BattleController : MonoBehaviour
 
     private void BackToMenu()
     {
+        if(sceneController == null)
+        {
+            sceneController = GameObject.Find("SceneManager");
+        }
         sceneController.GetComponent<SceneController>().MainMenuSceneProgressionWin();
         PlayerPartyController.instance.EndBattle();
     }

@@ -12,7 +12,6 @@ public class UIController : MonoBehaviour
     [Header("BattleSceneExclusiveUI")]
     public Button attack1Button;
     public Button attack2Button;
-    public Text resultsText;
     public List<Sprite> buttonSprites;
 
     [Header("UniversalUI")]
@@ -92,6 +91,11 @@ public class UIController : MonoBehaviour
 
     public void SwitchAttackButtonVisibility(bool isActive, bool isActive2)
     {
+        if(attack1Button == null || attack2Button == null)
+        {
+            SetButtonsIfNull();
+        }
+
         attack1Button.interactable = isActive;
         if(BattleController.instance.currentChar != null && BattleController.instance.currentChar.specialIsReady)
         {
@@ -152,5 +156,11 @@ public class UIController : MonoBehaviour
         {
             attack2Button.GetComponentInChildren<Text>().text += ": " + BattleController.instance.currentChar.cooldown;
         }
+    }
+
+    private void SetButtonsIfNull()
+    {
+        attack1Button = GameObject.Find("attack1Button").GetComponent<Button>();
+        attack2Button = GameObject.Find("attack2Button").GetComponent<Button>();
     }
 }

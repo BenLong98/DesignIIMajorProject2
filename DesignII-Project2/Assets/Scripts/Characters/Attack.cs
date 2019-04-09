@@ -10,6 +10,9 @@ public class Attack : MonoBehaviour
     private string _targetTag;
     private GameObject _target;
 
+    [SerializeField] private AudioClip[] _attackSounds;
+    [SerializeField] private AudioSource _attackSoundSource;
+
     public GameObject target
     {
         get { return _target;}
@@ -56,16 +59,28 @@ public class Attack : MonoBehaviour
             Debug.Log("attack hit");
             if (BattleController.instance.currentChar.classType == GenericPlayerChar.CharClass.Barbarian
                 || BattleController.instance.currentChar.classType == GenericPlayerChar.CharClass.Knight
-                || BattleController.instance.currentChar.classType == GenericPlayerChar.CharClass.Ranger
-                || BattleController.instance.currentChar.classType == GenericPlayerChar.CharClass.Rogue
-                || BattleController.instance.currentChar.classType == GenericPlayerChar.CharClass.Wizard)
+                || BattleController.instance.currentChar.classType == GenericPlayerChar.CharClass.Rogue)
             {
                 int damage = (int)Mathf.Round(BattleController.instance.currentChar.attack * (1 -((float)targetOfAttack.defense / 100)));
                 targetOfAttack.Hurt(damage);
+                PlayAttackSound(_attackSounds[0]);
+            }
+            else if(BattleController.instance.currentChar.classType == GenericPlayerChar.CharClass.Ranger)
+            {
+                int damage = (int)Mathf.Round(BattleController.instance.currentChar.attack * (1 - ((float)targetOfAttack.defense / 100)));
+                targetOfAttack.Hurt(damage);
+                PlayAttackSound(_attackSounds[2]);
+            }
+            else if(BattleController.instance.currentChar.classType == GenericPlayerChar.CharClass.Wizard)
+            {
+                int damage = (int)Mathf.Round(BattleController.instance.currentChar.attack * (1 - ((float)targetOfAttack.defense / 100)));
+                targetOfAttack.Hurt(damage);
+                PlayAttackSound(_attackSounds[3]);
             }
             else if (BattleController.instance.currentChar.classType == GenericPlayerChar.CharClass.Cleric)
             {
                 targetOfAttack.Heal(targetOfAttack.maxHealth / 2);
+                PlayAttackSound(_attackSounds[1]);
             }
         }
 
@@ -77,6 +92,7 @@ public class Attack : MonoBehaviour
         if (BattleController.instance.currentChar.classType == GenericPlayerChar.CharClass.Barbarian)
         {
             BattleController.instance.currentChar.isAggro = true;
+            //PlayAttackSound(_attackSounds[0]);
         }
         else if (BattleController.instance.currentChar.classType == GenericPlayerChar.CharClass.Cleric)
         {
@@ -85,11 +101,13 @@ public class Attack : MonoBehaviour
             {
                 GenericPlayerChar stats = player.GetComponent<GenericPlayerChar>();
                 stats.Heal(stats.maxHealth / 3);
+                PlayAttackSound(_attackSounds[1]);
             }
         }
         else if (BattleController.instance.currentChar.classType == GenericPlayerChar.CharClass.Knight)
         {
             _target.GetComponent<GenericPlayerChar>().isShielded = true;
+            //PlayAttackSound(_attackSounds[0]);
         }
         else if (BattleController.instance.currentChar.classType == GenericPlayerChar.CharClass.Ranger)
         {
@@ -97,11 +115,13 @@ public class Attack : MonoBehaviour
             if (chanceToMiss < BattleController.instance.currentChar.accuracy / 2)
             {
                 int damage = (int)Mathf.Round(100 * (1 - ((float)_target.GetComponent<GenericPlayerChar>().defense / 100)));
-            }              
+                PlayAttackSound(_attackSounds[2]);
+            }
         }
         else if (BattleController.instance.currentChar.classType == GenericPlayerChar.CharClass.Rogue)
         {
             BattleController.instance.currentChar.isEvading = true;
+            //PlayAttackSound(_attackSounds[0]);
         }
         else if (BattleController.instance.currentChar.classType == GenericPlayerChar.CharClass.Wizard)
         {
@@ -112,6 +132,7 @@ public class Attack : MonoBehaviour
                 int damage = (int)Mathf.Round(BattleController.instance.currentChar.attack * (1 - ((float)stats.defense / 100)) / 2);
                 stats.Hurt(damage);
             }
+            PlayAttackSound(_attackSounds[4]);
         }
 
         BattleController.instance.currentChar.SetCooldown();
@@ -187,5 +208,11 @@ public class Attack : MonoBehaviour
             }
         }
         GameObject.Find("UIController").GetComponent<UIController>().ChangeAttackButtonText();
+    }
+
+    private void PlayAttackSound(AudioClip sound)
+    {
+        _attackSoundSource.clip = sound;
+        _attackSoundSource.Play();
     }
 }

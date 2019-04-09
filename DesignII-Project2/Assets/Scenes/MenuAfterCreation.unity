@@ -209,7 +209,6 @@ MonoBehaviour:
   startBattleButton: {fileID: 0}
   attack1Button: {fileID: 0}
   attack2Button: {fileID: 0}
-  resultsText: {fileID: 0}
   buttonSprites: []
   quitButton: {fileID: 0}
   gearButton: {fileID: 0}
@@ -258,7 +257,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
