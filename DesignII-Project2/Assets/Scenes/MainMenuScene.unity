@@ -852,7 +852,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: -504.84686, y: 29.491066}
-  m_SizeDelta: {x: 175.795, y: 80.503}
+  m_SizeDelta: {x: 236.1, y: 116.7}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &199084267
 MonoBehaviour:
@@ -1081,7 +1081,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 227.95816, y: 148.61115}
-  m_SizeDelta: {x: 175.795, y: 80.503}
+  m_SizeDelta: {x: 255.5, y: 121.5}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &306355365
 MonoBehaviour:
@@ -3421,8 +3421,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 210.57446, y: 101.03514}
-  m_SizeDelta: {x: 175.795, y: 80.503}
+  m_AnchoredPosition: {x: 240, y: 93}
+  m_SizeDelta: {x: 226.8, y: 121.4}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &933671245
 MonoBehaviour:
@@ -4086,8 +4086,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000015258789, y: -0.0000038146973}
-  m_SizeDelta: {x: 143.4, y: 48.2}
+  m_AnchoredPosition: {x: -0.7, y: 2.4}
+  m_SizeDelta: {x: 227.9, y: 91.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1175413377
 MonoBehaviour:
@@ -4519,19 +4519,21 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 40
+    m_Font: {fileID: 12800000, guid: b3094046c8a6e1d48a23719fec1d79cd, type: 3}
+    m_FontSize: 44
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
-    m_MaxSize: 40
+    m_MaxSize: 53
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Play
+  m_Text: 'Battle
+
+    Shoreside'
 --- !u!222 &1310679603
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4573,8 +4575,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000015258789, y: -0.0000038146973}
-  m_SizeDelta: {x: 143.4, y: 48.2}
+  m_AnchoredPosition: {x: 0, y: 0.0000038146973}
+  m_SizeDelta: {x: 204.4, y: 105.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1370152516
 MonoBehaviour:
@@ -4885,6 +4887,15 @@ Prefab:
       propertyPath: gameHandler
       value: 
       objectReference: {fileID: 1065323566}
+    - target: {fileID: 95791466085349120, guid: 5264774ecfef7184585650291d4ec522,
+        type: 2}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 786ab310066bb82409890304e0e72ecc, type: 2}
+    - target: {fileID: 1926955452359364, guid: 5264774ecfef7184585650291d4ec522, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5264774ecfef7184585650291d4ec522, type: 2}
   m_IsPrefabAsset: 0
@@ -5394,19 +5405,19 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 29
+    m_Font: {fileID: 12800000, guid: ef4560002f773a24caacdf8d5bf9afa0, type: 3}
+    m_FontSize: 46
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
-    m_MaxSize: 40
+    m_MaxSize: 49
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Coming Soon
+  m_Text: "Battle \nBridge"
 --- !u!222 &1622865105
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5574,8 +5585,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.0000076293945, y: 0.0000076293945}
-  m_SizeDelta: {x: 30.84, y: 24.06}
+  m_AnchoredPosition: {x: -0.000015258789, y: -0.0000038146973}
+  m_SizeDelta: {x: 86.18, y: 46.297}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1719753434
 MonoBehaviour:
@@ -5597,7 +5608,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: b3094046c8a6e1d48a23719fec1d79cd, type: 3}
     m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
@@ -5609,7 +5620,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Coming Soon
+  m_Text: 'Battle
+
+    Demon Castle'
 --- !u!222 &1719753435
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6318,8 +6331,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000015258789, y: -0.0000038146973}
-  m_SizeDelta: {x: 143.4, y: 48.2}
+  m_AnchoredPosition: {x: -0.2, y: -0}
+  m_SizeDelta: {x: 211, y: 96.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2119370533
 MonoBehaviour:

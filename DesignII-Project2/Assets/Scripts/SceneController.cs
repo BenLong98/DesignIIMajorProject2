@@ -74,7 +74,9 @@ public class SceneController : MonoBehaviour
 
     public void CharacterSelectionSceneProgression()
     {
-        gameHandler.GetComponent<GameHandler>().uiController.SetActive(false);
+       // gameHandler.GetComponent<GameHandler>().uiController.SetActive(false);
+        gameHandler.GetComponent<GameHandler>().isInMenu = false;
+        gameHandler.GetComponent<GameHandler>().menuCounter += 1;
         //PlayerCanvasController.instance.playerCanvas.SetActive(false);
         //PlayerPartyController.instance.playerCanvas.SetActive(false);
         SceneManager.LoadScene("CharacterSelectionScene");

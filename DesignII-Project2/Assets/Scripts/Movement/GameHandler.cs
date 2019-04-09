@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Assets.HeroEditor.Common.CharacterScripts;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -85,7 +86,7 @@ public class GameHandler : MonoBehaviour {
             foreach (RaycastResult result in results)
             {
                 if (result.gameObject.transform.tag == "WayPoint") {
-                    if (level == result.gameObject.GetComponent<WayPoint>().GetLevel() - 1) {
+                    if (level >= result.gameObject.GetComponent<WayPoint>().GetLevel() - 1) {
 
                         Debug.Log("Hit " + result.gameObject.name);
                         currentTarget = result.gameObject;
@@ -118,10 +119,12 @@ public class GameHandler : MonoBehaviour {
         float startTime = Time.time; 
         while (Time.time - startTime <= 2)
         {
+            player.GetComponent<Character>().Animator.SetBool("Movement", true);
             player.transform.position = Vector3.Lerp(player.transform.position, pos, (Time.time - startTime) * 0.1f);
             yield return 1; 
         }
-        yield return new WaitForSeconds(0.25f);
+        player.GetComponent<Character>().Animator.SetBool("Movement", false);
+        yield return new WaitForSeconds(0.1f);
 
         OpenPlayDialog();
 
@@ -131,7 +134,7 @@ public class GameHandler : MonoBehaviour {
 
 
     private void OpenPlayDialog() {
-        if (level == currentTarget.GetComponent<WayPoint>().GetLevel() - 1)
+        if (level >= currentTarget.GetComponent<WayPoint>().GetLevel() - 1)
         {
             //Clear all play options
             for (int i = 0; i < allWayPoints.Length; i++) {
