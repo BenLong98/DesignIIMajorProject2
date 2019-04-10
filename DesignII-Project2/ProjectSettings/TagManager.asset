@@ -20,6 +20,7 @@ TagManager:
   - TitleText
   - Credits
   - Help
+  - Play
   layers:
   - Default
   - TransparentFX

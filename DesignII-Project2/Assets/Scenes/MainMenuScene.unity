@@ -17317,7 +17317,7 @@ GameObject:
   - component: {fileID: 1175413377}
   m_Layer: 0
   m_Name: playLevelButton
-  m_TagString: Untagged
+  m_TagString: Play
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17995,7 +17995,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Battle
 
-    Shoreside'
+    Lakeside'
 --- !u!222 &1310679603
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -18286,7 +18286,7 @@ GameObject:
   - component: {fileID: 1370152516}
   m_Layer: 0
   m_Name: playLevelButton
-  m_TagString: Untagged
+  m_TagString: Play
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25002,7 +25002,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: ef4560002f773a24caacdf8d5bf9afa0, type: 3}
-    m_FontSize: 46
+    m_FontSize: 44
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -25013,7 +25013,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Battle \nBridge"
+  m_Text: "Battle \nCastle Gates"
 --- !u!222 &1622865105
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -25158,6 +25158,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d564f6e63758d3749a75c07fdbfa77e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playButtons:
+  - {fileID: 306355363}
+  - {fileID: 933671243}
+  - {fileID: 199084265}
   currentScene: 
   gameHandler: {fileID: 1065323566}
 --- !u!4 &1637148318
@@ -30938,7 +30942,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Battle
 
-    Demon Castle'
+    Throne Room'
 --- !u!222 &1719753435
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -32709,7 +32713,7 @@ GameObject:
   - component: {fileID: 2119370533}
   m_Layer: 0
   m_Name: playLevelButton
-  m_TagString: Untagged
+  m_TagString: Play
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

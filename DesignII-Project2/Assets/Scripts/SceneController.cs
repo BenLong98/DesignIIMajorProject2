@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class SceneController : MonoBehaviour
@@ -9,8 +10,12 @@ public class SceneController : MonoBehaviour
 
     public static string battleSceneName;
 
+    public GameObject[] playButtons;
+
     [SerializeField] string currentScene;
     [SerializeField] GameObject gameHandler;
+
+
 
     public string publicCurrentScene
     {
@@ -23,6 +28,8 @@ public class SceneController : MonoBehaviour
         {
             gameHandler = GameObject.Find("GameHandler");
         }
+
+        
     }
 
 
@@ -44,8 +51,15 @@ public class SceneController : MonoBehaviour
 
     public void OnClickPlayLevelButton()
     {
+     
+
         gameHandler.GetComponent<GameHandler>().MoveToFrame();
         gameHandler.GetComponent<GameHandler>().isInMenu = true;
+
+        for (int i = 0; i < playButtons.Length - 1; i++) {
+            playButtons[i].gameObject.SetActive(false);
+        }
+
         battleSceneName = "Battle";
         CharacterSelectionSceneProgression();
     }
@@ -55,6 +69,13 @@ public class SceneController : MonoBehaviour
         gameHandler.GetComponent<GameHandler>().MoveToFrame();
         gameHandler.GetComponent<GameHandler>().isInMenu = true;
         battleSceneName = "Battle2";
+
+        for (int i = 0; i < playButtons.Length - 1; i++)
+        {
+            playButtons[i].gameObject.SetActive(false);
+        }
+
+
         CharacterSelectionSceneProgression();
     }
 
@@ -63,6 +84,13 @@ public class SceneController : MonoBehaviour
         gameHandler.GetComponent<GameHandler>().MoveToFrame();
         gameHandler.GetComponent<GameHandler>().isInMenu = true;
         battleSceneName = "Battle3";
+
+        for (int i = 0; i < playButtons.Length - 1; i++)
+        {
+            playButtons[i].gameObject.SetActive(false);
+        }
+
+
         CharacterSelectionSceneProgression();
     }
 
@@ -94,20 +122,16 @@ public class SceneController : MonoBehaviour
 
     public void MainMenuSceneProgressionWin()
     {
-        if (gameHandler.GetComponent<GameHandler>().canGoTo[0] == true)
+        if (gameHandler.GetComponent<GameHandler>().canGoTo[1] == true && gameHandler.GetComponent<GameHandler>().canGoTo[0] == true)
+        {
+            gameHandler.GetComponent<GameHandler>().canGoTo[2] = true;
+            gameHandler.GetComponent<GameHandler>().level += 1;
+        }else if(gameHandler.GetComponent<GameHandler>().canGoTo[0] == true)
         {
             gameHandler.GetComponent<GameHandler>().canGoTo[1] = true;
             gameHandler.GetComponent<GameHandler>().level += 1;
-        }
-        else if (gameHandler.GetComponent<GameHandler>().canGoTo[1] == true)
-        {
-            gameHandler.GetComponent<GameHandler>().canGoTo[2] = true;
-            gameHandler.GetComponent<GameHandler>().level += 1;
-        }
-        else if (gameHandler.GetComponent<GameHandler>().canGoTo[2]) {
-            gameHandler.GetComponent<GameHandler>().canGoTo[2] = true;
-            gameHandler.GetComponent<GameHandler>().level += 1;
-        }
+        } 
+
 
         gameHandler.GetComponent<GameHandler>().menuCounter += 1;
         gameHandler.GetComponent<GameHandler>().CheckMenus();
