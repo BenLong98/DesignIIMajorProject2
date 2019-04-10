@@ -41,10 +41,14 @@ public class GameHandler : MonoBehaviour {
     [SerializeField] GameObject creditsPanel;
     [SerializeField] GameObject helpPanel;
 
+
     public bool isInMenu = true;
     public bool doneCreating = false;
 
-    private Vector3 _originalPosition;
+
+    [SerializeField] Vector3 _originalPosition;
+
+    public bool[] canGoTo = new bool[3];
 
     /// <summary>
     /// Don't destroy when loading scenes
@@ -56,7 +60,11 @@ public class GameHandler : MonoBehaviour {
         gearMain = GameObject.FindGameObjectWithTag("GearMain");
         titleText = GameObject.FindGameObjectWithTag("TitleText");
 
+        for (int i = 0; i < canGoTo.Length - 1; i++) {
+            canGoTo[i] = false;
+        }
 
+        canGoTo[0] = true;
 
     }
 
@@ -86,7 +94,7 @@ public class GameHandler : MonoBehaviour {
             foreach (RaycastResult result in results)
             {
                 if (result.gameObject.transform.tag == "WayPoint") {
-                    if (level >= result.gameObject.GetComponent<WayPoint>().GetLevel() - 1) {
+                    if (canGoTo[result.gameObject.GetComponent<WayPoint>().GetLevel() - 1] == true) {
 
                         Debug.Log("Hit " + result.gameObject.name);
                         currentTarget = result.gameObject;
@@ -207,13 +215,17 @@ public class GameHandler : MonoBehaviour {
 
     public void MoveToFrame()
     {
+
+
+        isInMenu = true;
         _originalPosition = player.transform.position;
-        player.transform.position = new Vector3(-12.2f, 6.4f, 0);
-        player.transform.localScale = new Vector3(1, 1, 1);
+        player.transform.position = new Vector3(-7.17f, 3.93f, 0);
+        player.transform.localScale = new Vector3(.8f, .8f, .8f);
     }
 
     public void MoveToOriginalPosition()
     {
+        isInMenu = true;
         player.transform.position = _originalPosition;
         player.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
     }

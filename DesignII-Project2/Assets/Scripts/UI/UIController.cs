@@ -40,54 +40,6 @@ public class UIController : MonoBehaviour
         }
     }
 
-    public void OnClickQuitButton()
-    {
-        Application.Quit();
-    }
-
-    public void OnClickCreditsButton()
-    {
-        sceneController.GetComponent<SceneController>().CreditsSceneProgression();
-    }
-
-    public void OnClickStartBattleButton()
-    {
-        sceneController.GetComponent<SceneController>().BattleSceneProgression();
-    }
-
-    public void OnClickPlayLevelButton()
-    {
-        SceneController.battleSceneName = "Battle";
-        sceneController.GetComponent<SceneController>().CharacterSelectionSceneProgression();
-    }
-
-    public void OnClickPlayLevelButton2()
-    {
-        SceneController.battleSceneName = "Battle2";
-        sceneController.GetComponent<SceneController>().CharacterSelectionSceneProgression();
-    }
-
-    public void OnClickPlayLevelButton3()
-    {
-        SceneController.battleSceneName = "Battle3";
-        sceneController.GetComponent<SceneController>().CharacterSelectionSceneProgression();
-    }
-
-    public void OnClickMainMenuButton()
-    {      
-        sceneController.GetComponent<SceneController>().MainMenuSceneProgression();
-        gameHandler.GetComponent<GameHandler>().MoveToOriginalPosition();
-    }
-
-    public void OnClickPlayButton()
-    {
-        gameHandler.GetComponent<GameHandler>().isInMenu = false;
-        gameHandler.GetComponent<GameHandler>().menuCounter += 1;
-        gameHandler.GetComponent<GameHandler>().doneCreating = true;       
-        gameHandler.GetComponent<GameHandler>().CheckMenus();
-        sceneController.GetComponent<SceneController>().CharacterSelectionSceneProgression();
-        gameHandler.GetComponent<GameHandler>().MoveToFrame();
-    }
 
     public void SwitchAttackButtonVisibility(bool isActive, bool isActive2)
     {

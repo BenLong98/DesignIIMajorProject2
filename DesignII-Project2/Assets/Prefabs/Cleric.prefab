@@ -1532,6 +1532,7 @@ GameObject:
   - component: {fileID: 114878676396911922}
   - component: {fileID: 114198809463912922}
   - component: {fileID: 65162575892185346}
+  - component: {fileID: 114534323230352114}
   m_Layer: 0
   m_Name: Cleric
   m_TagString: Player
@@ -3260,7 +3261,7 @@ Animator:
   m_GameObject: {fileID: 1369665066030378}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3e315a7ba30144f9b95dfeb0cc4291d5, type: 2}
+  m_Controller: {fileID: 9100000, guid: 786ab310066bb82409890304e0e72ecc, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -3588,6 +3589,17 @@ MonoBehaviour:
   _sliderPrefab: {fileID: 114304887695126696, guid: 2342303c1329d9b41a3ef94e641fb93d,
     type: 2}
   _isEnemy: 0
+--- !u!114 &114534323230352114
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1926955452359364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cacf8a3ef7fbd40a2616a1a5a6eb94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114615250654463546
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3690,6 +3702,7 @@ MonoBehaviour:
   _initiative: 70
   _accuracy: 100
   _cooldown: 3
+  deadCount: 0
   _classType: 1
 --- !u!114 &114887394325637392
 MonoBehaviour:

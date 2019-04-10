@@ -1213,6 +1213,7 @@ GameObject:
   - component: {fileID: 114828938187665886}
   - component: {fileID: 114204267452019290}
   - component: {fileID: 65637503315950250}
+  - component: {fileID: 114642661186894892}
   m_Layer: 0
   m_Name: Rogue
   m_TagString: Player
@@ -3260,7 +3261,7 @@ Animator:
   m_GameObject: {fileID: 1108877671396742}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3e315a7ba30144f9b95dfeb0cc4291d5, type: 2}
+  m_Controller: {fileID: 9100000, guid: 786ab310066bb82409890304e0e72ecc, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -3678,6 +3679,17 @@ MonoBehaviour:
   Fire: {fileID: 114383324598659606}
   Reload: {fileID: 114798341616557696}
   AmmoShooted: 0
+--- !u!114 &114642661186894892
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1735519301008770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cacf8a3ef7fbd40a2616a1a5a6eb94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114702090805193560
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3721,6 +3733,7 @@ MonoBehaviour:
   _initiative: 90
   _accuracy: 85
   _cooldown: 3
+  deadCount: 0
   _classType: 4
 --- !u!114 &114837816239811566
 MonoBehaviour:

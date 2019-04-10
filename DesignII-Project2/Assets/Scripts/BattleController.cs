@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Assets.HeroEditor.Common.CharacterScripts;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -16,6 +17,8 @@ public class BattleController : MonoBehaviour
     private GenericPlayerChar _currentChar;
     [SerializeField] GameObject sceneController;
     [SerializeField] private Text _turnPromptText;
+
+
 
     public GenericPlayerChar currentChar
     {
@@ -184,24 +187,35 @@ public class BattleController : MonoBehaviour
             //LERP MOVEMENT
             if (currentChar.gameObject.tag == "Enemy")
             {
-                yield return new WaitForSeconds(3f);
+                
                 float startTime = Time.time;
                 while (Time.time - startTime <= 2)
                 {
-                    currentChar.gameObject.transform.position = Vector3.Lerp(currentChar.gameObject.transform.position, players[target].gameObject.transform.position, (Time.time - startTime) * 0.1f);
+                    currentChar.gameObject.GetComponent<CharacterFlipper>().FlipFoward();
+                    currentChar.gameObject.GetComponent<Character>().Animator.SetBool("Movement", true);
+
+                    currentChar.gameObject.transform.position = Vector3.Lerp(currentChar.gameObject.transform.position, players[target].gameObject.transform.position + new Vector3(1.5f, 0 ,0), (Time.time - startTime) * 0.1f);
                     //Animation PLAY HERE
-                    //SOUND PLAY HERE
                     yield return 1;
+
                 }
-                yield return new WaitForSeconds(0.25f);
+                currentChar.gameObject.GetComponent<Character>().Animator.SetBool("MeleeAttack", true);
+                
+                yield return new WaitForSeconds(0.10f);
+                
+                currentChar.gameObject.GetComponent<Character>().Animator.SetBool("Movement", false);
+                yield return new WaitForSeconds(0.10f);
 
             }
 
-            yield return new WaitForSeconds(1f);
-
+           yield return new WaitForSeconds(1f);
+            this.gameObject.GetComponent<Attack>().PlayAttackSoundFromEnemy();
             //Set Damage
             int damage = (int)Mathf.Round(currentChar.attack * (1 - ((float)players[target].GetComponent<GenericPlayerChar>().defense / 100)));
             players[target].GetComponent<GenericPlayerChar>().Hurt(damage);
+
+            currentChar.gameObject.GetComponent<Character>().Animator.SetBool("MeleeAttack", false);
+
 
             if (currentChar.gameObject.tag == "Enemy")
             {
@@ -209,12 +223,21 @@ public class BattleController : MonoBehaviour
                 float startTime = Time.time;
                 while (Time.time - startTime <= 2)
                 {
+                    currentChar.gameObject.GetComponent<CharacterFlipper>().FlipBack();
+                    currentChar.gameObject.GetComponent<Character>().Animator.SetBool("Movement", true);
+
                     currentChar.gameObject.transform.position = Vector3.Lerp(currentChar.gameObject.transform.position, GetPos(), (Time.time - startTime) * 0.1f);
                     //Animation PLAY HERE
+    
+                    
                     //SOUND PLAY HERE
                     yield return 1;
                 }
+               
+                currentChar.gameObject.GetComponent<Character>().Animator.SetBool("Movement", false);
+                currentChar.gameObject.GetComponent<CharacterFlipper>().FlipFoward();
                 yield return new WaitForSeconds(0.25f);
+                
             }
         }
 

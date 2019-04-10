@@ -1072,6 +1072,7 @@ GameObject:
   - component: {fileID: 114714919879355282}
   - component: {fileID: 114489491685554920}
   - component: {fileID: 65526819220583364}
+  - component: {fileID: 114604979506032068}
   m_Layer: 0
   m_Name: Barbarian
   m_TagString: Player
@@ -3260,7 +3261,7 @@ Animator:
   m_GameObject: {fileID: 1721387976652718}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3e315a7ba30144f9b95dfeb0cc4291d5, type: 2}
+  m_Controller: {fileID: 9100000, guid: 786ab310066bb82409890304e0e72ecc, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -3551,6 +3552,17 @@ MonoBehaviour:
   SortingOrderOffset: 0
   SortingOrderStep: 5
   ZStep: 0.00001
+--- !u!114 &114604979506032068
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1670277555282186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cacf8a3ef7fbd40a2616a1a5a6eb94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114666019029496346
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3727,6 +3739,7 @@ MonoBehaviour:
   _initiative: 70
   _accuracy: 75
   _cooldown: 2
+  deadCount: 0
   _classType: 0
 --- !u!114 &114807552981062382
 MonoBehaviour:

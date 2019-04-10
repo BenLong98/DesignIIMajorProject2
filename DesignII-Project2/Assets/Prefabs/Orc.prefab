@@ -3405,6 +3405,7 @@ MonoBehaviour:
   _initiative: 60
   _accuracy: 60
   _cooldown: 0
+  deadCount: 0
   _classType: 7
 --- !u!114 &114675255926790484
 MonoBehaviour:

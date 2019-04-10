@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Assets.HeroEditor.Common.CharacterScripts;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,6 +13,8 @@ public class GenericPlayerChar : MonoBehaviour
     [SerializeField] private int _initiative;
     [SerializeField] private int _accuracy;
     [SerializeField] private int _cooldown;
+
+    [SerializeField] private int deadCount = 0;
 
     [SerializeField] private CharClass _classType;
 
@@ -132,7 +135,22 @@ public class GenericPlayerChar : MonoBehaviour
     {
         if (howHurt < 0)
             howHurt = 0;
+
+     
+        
         _health -= howHurt;
+
+        if (_health <= 0) {
+            Death();
+        }
+    }
+
+    public void Death() {
+        deadCount += 1;
+        if (deadCount == 1) {
+            this.gameObject.GetComponent<Character>().Animator.SetTrigger("Dead");
+        }
+      
     }
 
     public void Heal(int howHeal)

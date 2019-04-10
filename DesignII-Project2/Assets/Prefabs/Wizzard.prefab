@@ -1054,6 +1054,7 @@ GameObject:
   - component: {fileID: 114243165103395626}
   - component: {fileID: 114200326322159412}
   - component: {fileID: 65930517320165252}
+  - component: {fileID: 114073578405757232}
   m_Layer: 0
   m_Name: Wizzard
   m_TagString: Player
@@ -3260,7 +3261,7 @@ Animator:
   m_GameObject: {fileID: 1972906851932202}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3e315a7ba30144f9b95dfeb0cc4291d5, type: 2}
+  m_Controller: {fileID: 9100000, guid: 786ab310066bb82409890304e0e72ecc, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -3302,6 +3303,17 @@ MonoBehaviour:
   Speed: {x: -2, y: -3, z: 0}
   RotationSpeed: 720
   Lifetime: 0.5
+--- !u!114 &114073578405757232
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1606929481381972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cacf8a3ef7fbd40a2616a1a5a6eb94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114138873802670616
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3477,6 +3489,7 @@ MonoBehaviour:
   _initiative: 75
   _accuracy: 85
   _cooldown: 3
+  deadCount: 0
   _classType: 5
 --- !u!114 &114253082877351422
 MonoBehaviour:

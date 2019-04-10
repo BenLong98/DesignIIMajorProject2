@@ -972,6 +972,7 @@ GameObject:
   - component: {fileID: 114946971485260392}
   - component: {fileID: 114476407948054930}
   - component: {fileID: 65728342533125306}
+  - component: {fileID: 114005004891262172}
   m_Layer: 0
   m_Name: Ranger
   m_TagString: Player
@@ -3260,7 +3261,7 @@ Animator:
   m_GameObject: {fileID: 1691803079140292}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3e315a7ba30144f9b95dfeb0cc4291d5, type: 2}
+  m_Controller: {fileID: 9100000, guid: 786ab310066bb82409890304e0e72ecc, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -3269,6 +3270,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114005004891262172
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1637241502528832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cacf8a3ef7fbd40a2616a1a5a6eb94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114021671438738952
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3740,6 +3752,7 @@ MonoBehaviour:
   _initiative: 80
   _accuracy: 95
   _cooldown: 2
+  deadCount: 0
   _classType: 3
 --- !u!198 &198209308843770882
 ParticleSystem:

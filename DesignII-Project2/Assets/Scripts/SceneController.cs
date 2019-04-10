@@ -25,28 +25,96 @@ public class SceneController : MonoBehaviour
         }
     }
 
+
+    public void OnClickQuitButton()
+    {
+        Application.Quit();
+    }
+
+    public void OnClickCreditsButton()
+    {
+        CreditsSceneProgression();
+    }
+
+    public void OnClickStartBattleButton()
+    {
+        gameHandler.GetComponent<GameHandler>().isInMenu = false;
+        BattleSceneProgression();
+    }
+
+    public void OnClickPlayLevelButton()
+    {
+        gameHandler.GetComponent<GameHandler>().MoveToFrame();
+        gameHandler.GetComponent<GameHandler>().isInMenu = true;
+        battleSceneName = "Battle";
+        CharacterSelectionSceneProgression();
+    }
+
+    public void OnClickPlayLevelButton2()
+    {
+        gameHandler.GetComponent<GameHandler>().MoveToFrame();
+        gameHandler.GetComponent<GameHandler>().isInMenu = true;
+        battleSceneName = "Battle2";
+        CharacterSelectionSceneProgression();
+    }
+
+    public void OnClickPlayLevelButton3()
+    {
+        gameHandler.GetComponent<GameHandler>().MoveToFrame();
+        gameHandler.GetComponent<GameHandler>().isInMenu = true;
+        battleSceneName = "Battle3";
+        CharacterSelectionSceneProgression();
+    }
+
+    public void OnClickMainMenuButton()
+    {
+        MainMenuSceneProgression();
+        gameHandler.GetComponent<GameHandler>().MoveToOriginalPosition();
+    }
+
+    public void OnClickPlayButton()
+    {
+        gameHandler.GetComponent<GameHandler>().isInMenu = true;
+        gameHandler.GetComponent<GameHandler>().menuCounter += 1;
+        gameHandler.GetComponent<GameHandler>().doneCreating = true;
+        gameHandler.GetComponent<GameHandler>().CheckMenus();
+
+
+        CharacterSelectionSceneProgression();
+       
+    }
+
+
+
     public void CreditsSceneProgression()
     {
         SceneManager.LoadScene("CreditScreen");
     }
 
-   // public void MainMenuSceneProgression()
-  //  {
-//
-       // SceneManager.LoadScene("MenuAfterCreation");
- //   }
 
     public void MainMenuSceneProgressionWin()
     {
-        gameHandler.GetComponent<GameHandler>().level += 1;
+        if (gameHandler.GetComponent<GameHandler>().canGoTo[0] == true)
+        {
+            gameHandler.GetComponent<GameHandler>().canGoTo[1] = true;
+            gameHandler.GetComponent<GameHandler>().level += 1;
+        }
+        else if (gameHandler.GetComponent<GameHandler>().canGoTo[1] == true)
+        {
+            gameHandler.GetComponent<GameHandler>().canGoTo[2] = true;
+            gameHandler.GetComponent<GameHandler>().level += 1;
+        }
+        else if (gameHandler.GetComponent<GameHandler>().canGoTo[2]) {
+            gameHandler.GetComponent<GameHandler>().canGoTo[2] = true;
+            gameHandler.GetComponent<GameHandler>().level += 1;
+        }
+
         gameHandler.GetComponent<GameHandler>().menuCounter += 1;
         gameHandler.GetComponent<GameHandler>().CheckMenus();
-        //gameHandler.GetComponent<GameHandler>().uiController.SetActive(true);
-        //gameHandler.GetComponent<GameHandler>().gearMain.SetActive(true);
-        //gameHandler.GetComponent<GameHandler>().uiController.SetActive(true);
-        //gameHandler.GetComponent<GameHandler>().uiController.SetActive(true);
+
 
         gameHandler.GetComponent<GameHandler>().isInMenu = true;
+        gameHandler.GetComponent<GameHandler>().MoveToOriginalPosition();
         SceneManager.LoadScene("MenuAfterCreation");
     }
 
@@ -56,6 +124,7 @@ public class SceneController : MonoBehaviour
         gameHandler.GetComponent<GameHandler>().CheckMenus();
 
         gameHandler.GetComponent<GameHandler>().isInMenu = true;
+        gameHandler.GetComponent<GameHandler>().MoveToOriginalPosition();
         SceneManager.LoadScene("MenuAfterCreation");
     }
 
@@ -66,18 +135,13 @@ public class SceneController : MonoBehaviour
 
     public void BattleSceneProgression()
     {
-        //gameHandler.GetComponent<GameHandler>().uiController.SetActive(false);
         SceneManager.LoadScene(battleSceneName);
 
     }
 
     public void CharacterSelectionSceneProgression()
     {
-       // gameHandler.GetComponent<GameHandler>().uiController.SetActive(false);
-        gameHandler.GetComponent<GameHandler>().isInMenu = false;
         gameHandler.GetComponent<GameHandler>().menuCounter += 1;
-        //PlayerCanvasController.instance.playerCanvas.SetActive(false);
-        //PlayerPartyController.instance.playerCanvas.SetActive(false);
         SceneManager.LoadScene("CharacterSelectionScene");
     }
 

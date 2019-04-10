@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Assets.HeroEditor.Common.CharacterScripts;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -12,6 +13,8 @@ public class Attack : MonoBehaviour
 
     [SerializeField] private AudioClip[] _attackSounds;
     [SerializeField] private AudioSource _attackSoundSource;
+
+    private Vector3 currentCharPos = new Vector3(0, 0, 0);
 
     public GameObject target
     {
@@ -53,39 +56,157 @@ public class Attack : MonoBehaviour
 
     private void AttackTarget(GenericPlayerChar targetOfAttack)
     {
-        int chanceToMiss = Random.Range(0, 101);
-        if (chanceToMiss < BattleController.instance.currentChar.accuracy)
-        {
-            Debug.Log("attack hit");
-            if (BattleController.instance.currentChar.classType == GenericPlayerChar.CharClass.Barbarian
-                || BattleController.instance.currentChar.classType == GenericPlayerChar.CharClass.Knight
-                || BattleController.instance.currentChar.classType == GenericPlayerChar.CharClass.Rogue)
-            {
-                int damage = (int)Mathf.Round(BattleController.instance.currentChar.attack * (1 -((float)targetOfAttack.defense / 100)));
-                targetOfAttack.Hurt(damage);
-                PlayAttackSound(_attackSounds[0]);
-            }
-            else if(BattleController.instance.currentChar.classType == GenericPlayerChar.CharClass.Ranger)
-            {
-                int damage = (int)Mathf.Round(BattleController.instance.currentChar.attack * (1 - ((float)targetOfAttack.defense / 100)));
-                targetOfAttack.Hurt(damage);
-                PlayAttackSound(_attackSounds[2]);
-            }
-            else if(BattleController.instance.currentChar.classType == GenericPlayerChar.CharClass.Wizard)
-            {
-                int damage = (int)Mathf.Round(BattleController.instance.currentChar.attack * (1 - ((float)targetOfAttack.defense / 100)));
-                targetOfAttack.Hurt(damage);
-                PlayAttackSound(_attackSounds[3]);
-            }
-            else if (BattleController.instance.currentChar.classType == GenericPlayerChar.CharClass.Cleric)
-            {
-                targetOfAttack.Heal(targetOfAttack.maxHealth / 2);
-                PlayAttackSound(_attackSounds[1]);
-            }
-        }
-
-        BattleController.instance.NextTurn();
+        StartCoroutine("PlayerAttack", targetOfAttack);
     }
+
+    public IEnumerator PlayerAttack(GenericPlayerChar targetOfAttack) {
+
+        //LERP MOVEMENT
+        if (BattleController.instance.currentChar.classType == GenericPlayerChar.CharClass.Barbarian ||
+            BattleController.instance.currentChar.classType == GenericPlayerChar.CharClass.Knight ||
+            BattleController.instance.currentChar.classType == GenericPlayerChar.CharClass.Barbarian ||
+            BattleController.instance.currentChar.classType == GenericPlayerChar.CharClass.Rogue)
+        {
+
+            currentCharPos = BattleController.instance.currentChar.transform.position;
+            float startTimeAttack = Time.time;
+            while (Time.time - startTimeAttack <= 2)
+            {
+                BattleController.instance.currentChar.gameObject.GetComponent<CharacterFlipper>().FlipFoward();
+                BattleController.instance.currentChar.gameObject.GetComponent<Character>().Animator.SetBool("Movement", true);
+
+                BattleController.instance.currentChar.gameObject.transform.position = Vector3.Lerp(BattleController.instance.currentChar.gameObject.transform.position, targetOfAttack.gameObject.transform.position + new Vector3(-1.5f, 0, 0), (Time.time - startTimeAttack) * 0.1f);
+                //Animation PLAY HERE
+                yield return 1;
+
+            }
+      
+            BattleController.instance.currentChar.gameObject.GetComponent<Character>().Animator.SetBool("MeleeAttack", true);
+            yield return new WaitForSeconds(0.10f);
+            BattleController.instance.currentChar.gameObject.GetComponent<Character>().Animator.SetBool("Movement", false);
+            yield return new WaitForSeconds(0.10f);
+
+
+
+            yield return new WaitForSeconds(1f);
+
+
+            //SET DAMAGE
+            int chanceToMiss = Random.Range(0, 101);
+            if (chanceToMiss < BattleController.instance.currentChar.accuracy)
+            {
+                Debug.Log("attack hit");
+                if (BattleController.instance.currentChar.classType == GenericPlayerChar.CharClass.Barbarian
+                    || BattleController.instance.currentChar.classType == GenericPlayerChar.CharClass.Knight
+                    || BattleController.instance.currentChar.classType == GenericPlayerChar.CharClass.Rogue)
+                {
+                    int damage = (int)Mathf.Round(BattleController.instance.currentChar.attack * (1 - ((float)targetOfAttack.defense / 100)));
+                    targetOfAttack.Hurt(damage);
+                    PlayAttackSound(_attackSounds[0]);
+                }
+                else if (BattleController.instance.currentChar.classType == GenericPlayerChar.CharClass.Ranger)
+                {
+                    int damage = (int)Mathf.Round(BattleController.instance.currentChar.attack * (1 - ((float)targetOfAttack.defense / 100)));
+                    targetOfAttack.Hurt(damage);
+                    PlayAttackSound(_attackSounds[2]);
+                }
+                else if (BattleController.instance.currentChar.classType == GenericPlayerChar.CharClass.Wizard)
+                {
+                    int damage = (int)Mathf.Round(BattleController.instance.currentChar.attack * (1 - ((float)targetOfAttack.defense / 100)));
+                    targetOfAttack.Hurt(damage);
+                    PlayAttackSound(_attackSounds[3]);
+                }
+                else if (BattleController.instance.currentChar.classType == GenericPlayerChar.CharClass.Cleric)
+                {
+                    targetOfAttack.Heal(targetOfAttack.maxHealth / 2);
+                    PlayAttackSound(_attackSounds[1]);
+                }
+            }
+
+
+
+
+            BattleController.instance.currentChar.gameObject.GetComponent<Character>().Animator.SetBool("MeleeAttack", false);
+
+
+            yield return new WaitForSeconds(1f);
+            float startTime = Time.time;
+            while (Time.time - startTime <= 2)
+            {
+                BattleController.instance.currentChar.gameObject.GetComponent<CharacterFlipper>().FlipBack();
+                BattleController.instance.currentChar.gameObject.GetComponent<Character>().Animator.SetBool("Movement", true);
+
+                BattleController.instance.currentChar.gameObject.transform.position = Vector3.Lerp(BattleController.instance.currentChar.gameObject.transform.position, GetPos(), (Time.time - startTime) * 0.1f);
+                //Animation PLAY HERE
+
+
+                //SOUND PLAY HERE
+                yield return 1;
+            }
+
+            BattleController.instance.currentChar.gameObject.GetComponent<Character>().Animator.SetBool("Movement", false);
+            BattleController.instance.currentChar.gameObject.GetComponent<CharacterFlipper>().FlipFoward();
+            yield return new WaitForSeconds(0.25f);
+
+            BattleController.instance.NextTurn();
+
+        }
+        else if (BattleController.instance.currentChar.classType == GenericPlayerChar.CharClass.Ranger ||
+            BattleController.instance.currentChar.classType == GenericPlayerChar.CharClass.Wizard ||
+             BattleController.instance.currentChar.classType == GenericPlayerChar.CharClass.Cleric) {
+
+            //SET DAMAGE
+            int chanceToMiss = Random.Range(0, 101);
+            if (chanceToMiss < BattleController.instance.currentChar.accuracy)
+            {
+                Debug.Log("attack hit");
+                if (BattleController.instance.currentChar.classType == GenericPlayerChar.CharClass.Barbarian
+                    || BattleController.instance.currentChar.classType == GenericPlayerChar.CharClass.Knight
+                    || BattleController.instance.currentChar.classType == GenericPlayerChar.CharClass.Rogue)
+                {
+                    int damage = (int)Mathf.Round(BattleController.instance.currentChar.attack * (1 - ((float)targetOfAttack.defense / 100)));
+                    targetOfAttack.Hurt(damage);
+                    PlayAttackSound(_attackSounds[0]);
+                }
+                else if (BattleController.instance.currentChar.classType == GenericPlayerChar.CharClass.Ranger)
+                {
+                    int damage = (int)Mathf.Round(BattleController.instance.currentChar.attack * (1 - ((float)targetOfAttack.defense / 100)));
+                    targetOfAttack.Hurt(damage);
+                    PlayAttackSound(_attackSounds[2]);
+                }
+                else if (BattleController.instance.currentChar.classType == GenericPlayerChar.CharClass.Wizard)
+                {
+                    int damage = (int)Mathf.Round(BattleController.instance.currentChar.attack * (1 - ((float)targetOfAttack.defense / 100)));
+                    targetOfAttack.Hurt(damage);
+                    PlayAttackSound(_attackSounds[3]);
+                }
+                else if (BattleController.instance.currentChar.classType == GenericPlayerChar.CharClass.Cleric)
+                {
+                    targetOfAttack.Heal(targetOfAttack.maxHealth / 2);
+                    PlayAttackSound(_attackSounds[1]);
+                }
+            }
+
+
+            yield return new WaitForSeconds(0.25f);
+
+            BattleController.instance.NextTurn();
+        }
+    }
+
+
+
+
+
+
+        public Vector3 GetPos()
+    {
+        return currentCharPos;
+    }
+
+
+
+
 
     private void SpecialAttackTarget()
     {
@@ -210,9 +331,15 @@ public class Attack : MonoBehaviour
         GameObject.Find("UIController").GetComponent<UIController>().ChangeAttackButtonText();
     }
 
-    private void PlayAttackSound(AudioClip sound)
+    public void PlayAttackSound(AudioClip sound)
     {
         _attackSoundSource.clip = sound;
+        _attackSoundSource.Play();
+    }
+
+    public void PlayAttackSoundFromEnemy()
+    {
+        _attackSoundSource.clip = _attackSounds[0];
         _attackSoundSource.Play();
     }
 }
